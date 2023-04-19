@@ -1,0 +1,72 @@
+.userTerm
+  padding: 40px 15px 40px 15px
+  p
+    margin-bottom: 20px
+  p.p
+    margin-bottom: 40px
+  .text-align
+    text-align: center
+  ul
+    margin: inherit
+    padding-left: inherit
+    list-style-type: inherit
+  p.strong
+    font-weight: 900
+    margin-bottom: 5px
+    a
+      font-weight: 500
+      transition: all 0.4s
+      &:hover
+        opacity: 0.9
+
+h5
+  font-size: 18px
+
+.m0
+  margin-bottom: 4px
+
+.usePrivacy
+  p.strong
+    margin-top: 20px
+
+.rules
+  padding: 40px 15px
+  .text-align
+    text-align: center
+  p.strong
+    font-weight: 900
+    margin-bottom: 25px
+  p
+    margin-bottom: 20px
+  ul
+    margin-bottom: 20px
+    list-style-type: disc
+    padding-left: 25px
+
+.docs-list
+  padding: 50px 0
+  li
+    p
+      display: inline
+      transition: color .3s ease-in-out
+    a
+      color: #000
+      font-weight: 700
+      font-size: 20px
+      line-height: 25px
+      &:hover p
+        color: #546EDB
+
+    &:not(:last-child)
+      margin-bottom: 15px
+
+.cabinet__terms_list
+  .rules, .userTerm, .usePrivacy
+    padding: 0
+
+@media(max-width: 1024px)
+
+  .cabinet__terms_list
+    .rules, .userTerm, .usePrivacy
+      p, h5
+        font-size: 14px

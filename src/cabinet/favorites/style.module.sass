@@ -1,0 +1,27 @@
+@import "../../styles/variables.sass"
+
+.favorites
+    background: #FFFFFF
+    border: 1px solid #DDE2F8
+    border-radius: 8px
+    position: relative
+    padding-bottom: 20px
+    height: 100%
+    &__list_wrapper
+        padding: 20px
+        border-top: 1px solid #DDE2F8
+        border-radius: 8px
+    &__types
+        padding: 20px
+    .card label
+        cursor: default
+
+@media (max-width: 1024px)
+
+    .favorites
+        min-height: 200px
+        padding: 0
+        &__types
+            padding: 15px 10px 20px
+        &__list_wrapper
+            padding: 15px 10px

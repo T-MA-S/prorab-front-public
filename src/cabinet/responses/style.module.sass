@@ -1,0 +1,632 @@
+@import "../../styles/variables"
+
+.response
+  background: $white
+  border: 1px solid $light-blue
+  border-radius: 8px
+  position: relative
+  padding-bottom: 20px
+  height: 100%
+
+  &__types
+    padding: 20px
+    border-top: 1px solid #DDE2F8
+    border-radius: 10px
+
+  &__mode
+    padding: 20px
+
+  &__statuses
+    padding: 0 20px
+    margin-bottom: 20px
+    .item
+      @include p-14-400
+      color: $grey
+      cursor: pointer
+      &.active
+        color: $blue
+    &_wrapper
+      display: flex
+      justify-content: space-between
+      max-width: 200px
+      padding: 15px
+      border: 1px solid rgba(84, 110, 219, 0.2)
+      border-radius: 10px
+
+  &__objects
+    padding: 20px
+    width: 50%
+
+  &__order
+    width: 50%
+    border-left: 1px solid #DDE2F8
+    border-radius: 8px
+    &_call
+      display: inline-block
+      width: 50%
+      margin-bottom: 20px
+      padding: 16px
+      background: #546EDB
+      text-align: center
+      color: #fff
+      font-weight: 700
+      font-size: 15px
+      line-height: 19px
+      border-radius: 5px
+    &_data
+      display: flex
+      gap: 20px
+      margin-bottom: 7px
+      &_date,
+      &_time,
+      &_paid
+        span
+          display: flex
+          width: fit-content
+          margin-bottom: 5px
+          align-items: center
+          gap: 3px
+          padding: 5px
+          border-radius: 100px
+          color: #FFFFFF
+          font-size: 13px
+          line-height: 15px
+        p
+          font-size: 13px
+          line-height: 125%
+        svg
+          width: 18px
+          height: 18px
+      &_time,
+      &_date
+        font-weight: 400
+        span
+          background: #6FE1B8
+      &_paid
+        font-weight: 700
+        p
+          color: #546EDB
+        span
+          background: #546EDB
+    &_tabs
+      display: flex
+      gap: 11px
+      padding: 20px
+    &_tab
+      padding: 7px 10px 6px 12px
+      background: #DDE2F8
+      border-radius: 50px
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #7E91E4
+      cursor: pointer
+      &.active
+        color: #fff
+        background: #546edb
+    &_cart
+      border: 1px solid #6FE1B8
+      border-radius: 6px
+      padding: 17px 20px
+      &:not(:last-child)
+        margin-bottom: 20px
+      &.active
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+      .finish_text
+        background: #858585
+        font-weight: 700
+        border-radius: 3px
+        font-size: 20px
+        line-height: 125%
+        padding: 15px
+        text-align: center
+        color: #FFFFFF
+      &.finish
+        padding: 0
+        border: 1px solid #858585
+        .response__order_data
+          span
+            background: #858585
+        .response__order_data_paid p
+          color: #858585
+        .response__order_cart_top
+          padding: 20px
+          opacity: 0.5
+          margin-bottom: 0
+        .response__order_location
+          display: flex
+          align-items: center
+          gap: 3px
+          font-weight: 400
+          font-size: 13px
+          line-height: 125%
+          color: #858585
+        .response__order_descr
+          font-weight: 400
+          font-size: 12px
+          line-height: 125%
+          color: #858585
+        .response__order_cart_bottom
+          padding: 0 20px 20px 20px
+        .response__order_data_date svg path
+          fill: #858585
+      &_wrap
+        display: flex
+        gap: 7px
+
+      &_top
+        display: flex
+        justify-content: space-between
+        margin-bottom: 15px
+
+        img
+          width: 62px
+          height: 62px
+          object-fit: cover
+          border-radius: 100%
+
+      &_name
+        margin-bottom: 5px
+        font-weight: 600
+        font-size: 16px
+        line-height: 19px
+      &_data
+        color: #727070
+        font-weight: 300
+        font-size: 10px
+        line-height: 195%
+
+      &_id
+        font-weight: 300
+        font-size: 14px
+        line-height: 16px
+      // span
+      //   font-weight: 300
+      //   font-size: 14px
+      //   line-height: 16px
+      &_rating
+        color: #FFA800
+  &__list
+    padding: 20px
+    border-top: 1px solid $light-blue
+    border-radius: 8px
+    &_contractor
+      display: flex
+      border-top: 1px solid #DDE2F8
+      border-radius: 8px
+      .cart
+        display: flex
+        width: 100%
+        gap: 15px
+        cursor: pointer
+        background: #FFFFFF
+        border: 1px solid #6FE1B8
+        border-radius: 6px
+        transition: box-shadow .3s ease-in-out
+        .count
+          font-family: "Roboto"
+          font-weight: 700
+          font-size: 14px
+          line-height: 16px
+          border-radius: 40px
+        &.empty
+          opacity: 0.5
+          border: 1px solid rgba(84, 110, 219, 0.2)
+          .counter
+            border: 1px solid rgba(84, 110, 219, 0.2)
+            background: rgba(84, 110, 219, 0.2)
+          .count
+            background: none
+            color: #BBB9B9
+          path
+            fill: #BBB9B9
+        &:not(:last-child)
+          margin-bottom: 15px
+        &.active
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+        h3
+          margin-bottom: 5px
+          font-weight: 600
+          font-size: 13px
+          line-height: 16px
+        span
+          color: #858585
+          font-weight: 400
+          font-size: 10px
+          line-height: 125%
+        h5
+          margin-bottom: 0
+          font-weight: 600
+          font-size: 16px
+          line-height: 20px
+          color: #858585
+      .obj_img
+        width: 130px
+        object-fit: cover
+        border-radius: 6px
+      .text
+        width: 100%
+        padding: 8px 0
+      .prices
+        display: flex
+        gap: 20px
+      .counter
+        background: #6FE1B8
+        border: 1px solid #6FE1B8
+        border-radius: 4px
+        padding: 5px 13px
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 5px
+        color: #546EDB
+        justify-content: center
+  &__item
+    display: grid
+    grid-template-columns: 2fr 3fr 2fr
+    border: 1px solid rgba(84, 110, 219, 0.2)
+    border-radius: 10px
+    &:not(:last-child)
+      margin-bottom: 10px
+    &_top_wrapper
+      display: flex
+
+.user_info
+  padding: 15px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  flex-direction: column
+  p
+    font-weight: 600
+    font-size: 12px
+    line-height: 14px
+  span
+    @include p-14-600
+    color: $orange
+    &.norating
+      opacity: 0.6
+  img
+    width: 62px
+    height: 62px
+    object-fit: cover
+    border-radius: 100%
+
+.object_photo
+  border-radius: 10px
+  overflow: hidden
+  display: flex
+  &.disabled
+    position: relative
+    span
+      font-weight: 600
+      font-size: 12px
+      line-height: 14px
+      width: 100%
+      position: absolute
+      background: #858585
+      bottom: 0
+      text-align: center
+      color: white
+      border-radius: 10px
+      padding: 5px 30px
+  img
+    object-fit: cover
+    width: 100%
+
+.object_info
+  padding: 15px
+  &__title_wrapper
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+    align-items: center
+    p
+      @include p-16-600
+      color: #414253
+    span
+      display: flex
+      align-items: center
+      gap: 5px
+      font-size: 10px
+      line-height: 125%
+      text-align: justify
+      color: $grey
+  .descr
+    margin-bottom: 10px
+    @include p-10
+    color: $grey
+
+.tabs_wrapper
+  display: inline-block
+  padding: 3px
+  background: $purple-light
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  .tab
+    padding: 12px 20px
+    border: none
+    background: transparent
+    border-radius: 8px
+    @include p-16-400
+    color: $blue
+    &.active
+      font-weight: 600
+      line-height: 20px
+      color: $white
+      background: $blue
+
+.disabled
+  filter: grayscale(1)
+
+.response__info
+  display: flex
+  gap: 20px
+  justify-content: space-between
+  &.disabled
+    span
+      background-color: $grey
+
+  &_time, &_date, &_paid
+    span
+      display: inline-block
+      margin-bottom: 10px
+      padding: 4px
+      border-radius: 84px
+      padding-left: 20px
+      background-repeat: no-repeat
+      background-position: left 3px center
+      color: $white
+      @include p-11
+
+  &_time, &_date
+    p
+      @include p-11
+    span
+      background-color: $salad
+      &.clock
+        background-size: 15px
+        background-image: url(../../assets/images/clock.svg)
+      &.date
+        background-image: url(../../assets/images/calendar.svg)
+  &_paid
+    span
+      font-weight: 700
+      background-color: $blue
+      &.paid
+        background-image: url(../../assets/images/rubleWhite.svg)
+    p
+      color: $blue
+      @include p-11
+      font-weight: 700
+
+.contact
+  padding: 20px
+  display: flex
+  flex-direction: column
+  gap: 12px
+  border: 2px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  &_disabled
+    filter: grayscale(1)
+    .contact__settings
+      cursor: default
+  &__call
+    display: flex
+    gap: 5px
+    &.disabled
+      filter: grayscale(1)
+    a
+      display: inline-block
+      width: 100%
+      padding: 15px
+      text-align: center
+      color: $white
+      @include p-16-600
+      background: $blue
+      border-radius: 5px
+  &__settings
+    background: #D4E2F4
+    border-radius: 5px
+    padding: 13px
+    display: flex
+    align-items: center
+    cursor: pointer
+    position: relative
+    &_btns
+      width: 176px
+      bottom: -45px
+      position: absolute
+      display: flex
+      flex-direction: column
+      right: 0
+      padding: 12px
+      border: 1px solid $blue
+      box-shadow: 5px 5px 45px rgba(0, 89, 169, 0.15)
+      border-radius: 4px
+      background: $white
+      button
+        padding: 0
+        background: transparent
+        border: none
+        display: flex
+        gap: 10px
+        align-items: center
+        transition: color 0.3s ease-in-out
+        &:hover
+          color: $blue
+        @include  p-14-400
+        &:not(:last-child)
+          margin-bottom: 10px
+
+  &__messangers
+    display: flex
+    justify-content: space-between
+    &_feedback
+      background: #546EDB
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      width: 34px
+      height: 34px
+      border-radius: 100%
+    &_del
+      background: #D32121
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      width: 34px
+      height: 34px
+      border-radius: 100%
+      svg path
+        fill: $white
+    &_btns
+      display: flex
+      gap: 10px
+    span
+      @include p-10
+      color: $grey
+    .links
+      display: flex
+      gap: 12px
+      &.disabled
+        filter: grayscale(1)
+    a
+      width: 35px
+      height: 35px
+    img
+      width: 100%
+
+.feedback
+  &__title
+    margin-bottom: 10px
+    text-align: center
+    font-weight: 800
+    font-size: 24px
+    line-height: 30px
+  &__subtitle
+    display: inline-block
+    margin-bottom: 10px
+    @include p-14-500
+  textarea
+    width: 100%
+    padding: 15px
+    background: #F6F7FE
+    border: 1px solid rgba(84, 110, 219, 0.2)
+    border-radius: 10px
+    min-height: 200px
+    resize: none
+    margin-bottom: 20px
+  &__submit
+    display: flex
+    margin: 0 auto
+    justify-content: space-between
+    width: 235px
+    border-radius: 8px
+    position: relative
+    @include h-20
+    font-weight: 700
+    padding: 20px
+    color: $white
+    margin-bottom: 10px
+    border: none
+    background: $green-dark
+    p
+      width: 100%
+    span
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
+      border-radius: 5px
+      display: flex
+      align-items: center
+      padding: 11px
+      background: #3FC092
+      border-radius: 8px
+
+@media(max-width: 1200px)
+  .response
+    position: relative
+    &__info
+      flex-wrap: wrap
+      gap: 0
+      &_date, &_time, &_paid
+        width: 50%
+        margin-bottom: 10px
+        span
+          max-width: 130px
+          justify-content: center
+          margin-bottom: 10px
+    &__item
+      display: flex
+      flex-direction: column
+      &_top_wrapper
+        max-height: 125px
+  .user_info, .object_photo
+    width: 50%
+  .contact__messangers
+    justify-content: center
+    align-items: center
+  .response__objects, .response__order
+    width: 100%
+
+@media(max-width: 1024px)
+  .response
+    &__back
+      display: flex
+      align-items: center
+      gap: 5px
+    &__order
+      position: absolute
+      background: white
+      top: 0
+      left: -1px
+      height: 100%
+      height: 100%
+      transform: translateX(-120%)
+      transition: transform .3s ease-in-out
+      &.visible
+        transform: translateX(0)
+
+@media(max-width: 768px)
+  .response
+    &__mode, &__types, &__list
+      padding: 16px 8px
+    &__statuses
+      padding: 0 8px
+
+  .tabs_wrapper
+    width: 100%
+    .tab
+      padding: 15px 0
+      width: 50%
+
+@media(max-width: 576px)
+  .response
+    &__order_data
+      gap: 10px
+      flex-wrap: wrap
+    &__list_contractor
+      .text
+        padding: 4px 0
+      .counter
+        padding: 3px
+      .obj_img
+        width: 90px
+      .cart
+        gap: 3px
+        h5
+          font-size: 13px
+          line-height: 16px
+        span
+          font-size: 9px
+  .response__order_cart.finish
+    .response__order_cart
+      &_top
+        padding: 15px 12px
+      &_bottom
+        padding: 0 12px 20px 12px

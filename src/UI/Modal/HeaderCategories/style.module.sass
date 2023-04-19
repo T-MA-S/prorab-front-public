@@ -1,0 +1,188 @@
+.header_overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 50
+    background: rgba(0, 0, 0, 0.6)
+
+.parent
+    width: 100%
+    max-width: 280px
+    &__item
+        padding: 17px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        transition: all .3s ease-in-out
+        .wrapper
+            display: flex
+            gap: 10px
+            align-items: center
+        h5
+            margin-bottom: 0
+            max-width: 95%
+            font-size: 20px
+            font-weight: 400
+            line-height: 24px
+        &.active, &:hover
+            background: rgba(84, 110, 219, 0.1)
+            border-radius: 5px
+            color: #546EDB
+            & svg path
+                fill: #546EDB
+.container
+    position: relative
+.categories
+    display: flex
+    height: 400px
+    gap: 40px
+    width: 100%
+    padding: 40px 35px
+    position: absolute
+    z-index: 100
+    left: 0
+    right: 0
+    top: 130px
+    margin: 0 auto
+    border-radius: 0px 0px 15px 15px
+    background: #FFFFFF
+
+.list_categories
+    width: 100%
+    // max-width: 300px
+    // padding-top: 17px
+    padding-right: 20px
+    &.realty
+        max-width: unset
+        a
+            color: inherit
+            &:hover
+                color: #546EDB
+    h3
+        margin-bottom: 20px
+        font-weight: 600
+        font-size: 24px
+        line-height: 29px
+    &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        transition: all .3s ease-in-out
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        h5
+            max-width: 80%
+            margin-bottom: 0
+            font-weight: 600
+            font-size: 18px
+            line-height: 22px
+        &.active, &:hover
+            border-radius: 5px
+            color: #546EDB
+            & svg path
+                fill: #546EDB
+            .elements span
+                color: #fff
+                &::before
+                    background: #546EDB
+
+        .elements
+            display: flex
+            gap: 20px
+            align-items: center
+            span
+                font-weight: 500
+                font-size: 13px
+                line-height: 16px
+                position: relative
+                color: #7A7A7A
+                transition: color .3s ease-in-out
+
+                &::before
+                    content: ""
+                    position: absolute
+                    width: 22px
+                    height: 22px
+                    left: -5px
+                    top: -2px
+                    border-radius: 100%
+                    background: rgba(84, 110, 219, 0.15)
+                    z-index: -10
+                    transition: background .3s ease-in-out
+
+.childrens
+    padding-top: 45px
+    h3
+        display: none
+        font-weight: 600
+        font-size: 24px
+        line-height: 29px
+    &__item
+        display: block
+        color: #000
+        font-size: 15px
+        line-height: 18px
+        font-family: 'Roboto'
+        transition: color .3s ease-in-out
+
+        &:not(:last-child)
+            margin-bottom: 10px
+        &:hover
+            cursor: pointer
+            color: #546EDB
+.back_mob
+    display: none
+.btn_back
+    background-color: transparent
+    border: none
+    max-width: 100px
+    padding: 0
+    font-size: 18px
+    font-weight: 700
+    color: #858585
+    text-align: left
+
+@media (max-width: 1024px)
+    .categories
+        flex-direction: column
+        gap: 25px
+    .parent
+        max-width: unset
+    .list_categories
+        padding-top: 0
+        max-width: unset
+    .childrens
+        width: 100%
+        padding-top: 0
+        h3
+            display: block
+@media (max-width: 768px)
+    .list_categories__item h5
+        font-weight: 500
+    .categories
+        top: 0
+        padding: 0
+    .btn_back
+        display: none
+    .back_mob
+        display: block
+        background: #546EDB
+        border: none
+        position: absolute
+        width: 111%
+        left: -20px
+        top: -60px
+        color: #fff
+        padding: 15px
+        text-align: left
+        padding-left: 60px
+        font-size: 18px
+        line-height: 21px
+        background-image: url(../../../assets/images/green-arrow.svg)
+        background-repeat: no-repeat
+        background-position: left 30px center

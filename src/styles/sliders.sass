@@ -1,0 +1,113 @@
+//ОБЩИЕ СТИЛИ СЛАЙДЕРОВ
+.slick-prev
+  width: 33px
+  height: 33px
+  background-color: #546EDB
+  border-radius: 8px
+  background-image: url("../assets/images/prev.svg")
+  background-repeat: no-repeat
+  background-position: center
+  transition: background-color .3s ease-in-out
+  &:hover, &:focus
+    //иначе стили библиотеки переопределяют
+    background: unset
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("../assets/images/prev.svg")
+    background-color: #546EDB
+  &::before
+    display: none
+
+.slick-next
+  width: 33px
+  height: 33px
+  background-color: #546EDB
+  border-radius: 8px
+  background-image: url("../assets/images/next.svg")
+  background-repeat: no-repeat
+  background-position: center
+  transition: background-color .3s ease-in-out
+  &:hover, &:focus
+    //иначе стили библиотеки переопределяют
+    background: unset
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("../assets/images/next.svg")
+    background-color: #546EDB
+
+  &::before
+    display: none
+
+.slick-disabled
+  background-color: #A7B5F2
+
+// страница '/partners'
+.partners
+  .slick-prev
+    top: -30px
+    left: unset
+    right: 40px
+
+  .slick-next
+    top: -30px
+    right: 0
+
+  .slick-list
+    margin: 0 -10px
+
+  .slick-track
+    display: flex
+
+  .slick-slide
+    padding: 0 10px
+
+// страница '/catalog'
+.page_nav
+  .slick-prev, .slick-next
+    background-color: transparent
+  .slick-slide
+    display: flex !important
+    flex-direction: column
+    justify-content: space-between
+    gap: 20px
+  .slick-slider
+    background: #546EDB
+    padding-top: 20px
+
+.technique
+  .slick-list
+    margin: 0 -10px
+
+  .slick-slide
+    padding: 0 10px
+@media (max-width: 768px)
+  .partners
+    .slick-prev
+      left: 0
+
+    .slick-next
+      left: 40px
+
+    .slick-slide
+      display: flex
+      flex-direction: column
+      gap: 10px
+
+    .slick-list
+      margin: 0 -5px
+
+    .slick-slide
+      padding: 0 5px
+
+  .page_nav
+    .slick-slider
+      padding: 13px 0
+
+.slick_List_moderator
+  width: 333px
+  img
+    height: 222px
+    width: 100%
+    object-fit: cover
+  .slick-list
+    border-radius: 13px 13px 0 0

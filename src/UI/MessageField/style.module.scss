@@ -1,0 +1,97 @@
+.form {
+    position: relative;
+
+    &_wrapper {
+        display: flex;
+        gap: 23px;
+        background: #f6f7fe;
+        border: 1px solid rgba(84, 110, 219, 0.2);
+        border-radius: 10px;
+
+        button {
+            min-width: 76px;
+            background-color: #546edb;
+            border-radius: 6px;
+            outline: none;
+            border: none;
+            background-image: url(../../assets/images/send-message-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .disabled {
+            background-color: #aeafb4;
+            cursor: default;
+        }
+    }
+
+    .input {
+        padding: 20px 0 20px 70px;
+        resize: none;
+        min-height: 50px;
+        background: #f6f8f9;
+        border-radius: inherit;
+        width: 100%;
+        outline: none;
+        border: none;
+    }
+
+    .bg {
+        cursor: pointer;
+        position: absolute;
+        left: 15px;
+        top: 8px;
+        width: 44px;
+        height: 44px;
+        min-width: unset;
+        &::after {
+            content: "";
+            width: 44px;
+            height: 44px;
+            background-color: #546edb;
+            border-radius: 100%;
+            position: absolute;
+            background-image: url(../../assets/images/bg-img.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .form {
+        .input {
+            padding: 20px 0 20px 65px;
+        }
+        .form_wrapper {
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .form {
+        .input {
+            padding: 15px 0 15px 45px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .bg {
+            width: 35px;
+            height: 35px;
+            left: 5px;
+
+            &::after {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &_wrapper {
+            button {
+                min-width: 50px;
+                background-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,341 @@
+h2 {
+    margin-bottom: 13px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 110%;
+}
+
+.hero {
+    padding-bottom: 50px;
+    background-color: #fff;
+
+    &__bg {
+        padding: 45px 0 120px;
+        color: #fff;
+        background-image: url(../../assets/images/index/banner.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        border-radius: 14px;
+        p {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        h1,
+        p {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 13px;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 110%;
+        }
+    }
+    &__categories {
+        ul {
+            margin-top: -80px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            background: #ffffff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: inherit;
+            img {
+                width: 100%;
+            }
+        }
+        h5 {
+            margin-bottom: 3px;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 400;
+        }
+        button {
+            padding: 7px 25px;
+            background: #4088dd;
+            border-radius: 100px;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+.advantages {
+    padding: 45px 0;
+    background: #546edb;
+    border-radius: 14px;
+    color: #fff;
+    ul {
+        display: flex;
+        gap: 20px;
+    }
+    li {
+        width: 100%;
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+        }
+    }
+    .text {
+        margin-bottom: 34px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.app {
+    padding: 50px 0;
+    background: #fff;
+    &__text {
+        p {
+            margin-bottom: 15px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 125%;
+        }
+    }
+    h6 {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 125%;
+    }
+    &__wrapper,
+    &__links {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+        color: #fff;
+        background: #546edb;
+        border-radius: 7px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 115%;
+        span {
+            font-weight: 700;
+            font-size: 17px;
+        }
+    }
+    .special {
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        color: #546edb;
+    }
+}
+
+.brigades {
+    padding-bottom: 50px;
+    background-color: #fff;
+    h2 {
+        color: #000000;
+        margin-bottom: 33px;
+    }
+
+    &__box {
+        display: flex;
+        gap: 20px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: scale 0.3s ease-in-out;
+    }
+    .wrapper {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            border: 4px solid #f7f7fe;
+            bottom: -20px;
+            right: 16px;
+            background-color: #546edb;
+            background-image: url(../../assets/images/white-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .img_wrapper {
+        border-radius: 14px;
+        height: 150px;
+        overflow: hidden;
+    }
+    a {
+        width: 100%;
+        background-color: #f7f7fe;
+        color: inherit;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        border-radius: 14px;
+        overflow: hidden;
+
+        p {
+            padding: 17px;
+        }
+        &:hover img {
+            scale: 1.1;
+        }
+    }
+}
+
+.realty {
+    background:#fff;
+    .card {
+        background:#F7F7FE;
+    }
+}
+
+.equipment {
+    background:#F7F7FE;
+    border-radius: 14px;
+}
+
+.supply {
+    padding: 50px 0;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        &__categories {
+            a {
+                flex-direction: column;
+            }
+        }
+    }
+    .advantages {
+        li p {
+            font-size: 14px;
+        }
+    }
+    .app {
+        &__wrapper {
+            position: relative;
+        }
+        &__links {
+            flex-direction: column;
+        }
+        .container {
+            max-width: 60%;
+        }
+        .phone {
+            position: absolute;
+            right: -280px;
+            bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 30px;
+        line-height: 110%;
+    }
+    .hero {
+        padding-bottom: 35px;
+        &__bg {
+            padding: 26px 0 128px;
+            h1 {
+                font-weight: 800;
+                font-size: 25px;
+                line-height: 110%;
+            }
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        &__categories {
+            ul {
+                gap: 10px;
+                margin-top: -110px;
+                padding: 14px 20px;
+                flex-direction: column;
+            }
+            a {
+                flex-direction: row;
+                img {
+                    max-width: 40%;
+                }
+            }
+            h5 {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            button {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+    .brigades {
+        padding-bottom: 35px;
+        h2 {
+            margin-bottom: 15px;
+        }
+        &__box {
+            flex-direction: column;
+        }
+    }
+    .advantages {
+        padding: 25px 0;
+        ul {
+            flex-wrap: wrap;
+        }
+        li {
+            width: calc(50% - 10px);
+        }
+        .text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    .app {
+        .container {
+            max-width: 100%;
+        }
+        &__links {
+            width: 56%;
+        }
+        a {
+            gap: 5px;
+            font-size: 11px;
+            line-height: 115%;
+        }
+        span {
+            font-size: 15px;
+            line-height: 115%;
+        }
+        .phone {
+            width: 300px;
+            right: -158px;
+        }
+    }
+}

@@ -1,0 +1,612 @@
+.item-enter
+  opacity: 0
+
+.cabinet__wallet_wrap .slick-dots li button:before
+  display: none
+
+.item-enter-active
+  opacity: 1
+  transition: all 500ms ease-in
+
+.item-exit
+  opacity: 1
+  transform: scale(100%)
+  zoom: 1
+
+.item-exit-active
+  opacity: 0
+  position: absolute
+  z-index: 3
+  transform: scale(50%)
+  margin-top: -180px
+  transition: all 500ms linear
+
+.feedback__main
+  background: #FFFFFF
+  min-height: calc(100% - 42px)
+  border: 1px solid #DDE2F8
+  border-radius: 14px
+
+.info_block__time::-webkit-calendar-picker-indicator
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: auto
+  height: auto
+  opacity: 0
+  color: transparent
+  background: transparent
+
+.cabinet__time_info
+  position: relative
+  span
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 41px
+    background: #546edb
+    border-radius: 10px
+    color: #fff
+    font-weight: 500
+    font-size: 14px
+
+.feedback_bottom_block
+  padding: 26px 27px 26px 27px
+  border-top: 1px solid #DDE2F8
+  border-radius: 14px
+  position: relative
+  min-height: 400px
+
+.feedback_item
+  max-width: 262px
+  min-width: 262px
+  background: #FFFFFF
+  border: 1px solid #DDE2F8
+  border-radius: 7.5px
+  padding: 18px 20px 20px 21px
+
+.feedback__top_flex
+  display: flex
+  align-items: center
+
+.feedback__img
+  margin-right: 15px
+  img
+    width: 46px
+    height: 46px
+    border-radius: 100%
+
+
+.feedback_name
+  font-family: Roboto
+  font-weight: 700
+  font-size: 15px
+  line-height: 18px
+  color: #414253
+
+.feedback__info
+  margin-top: -8px
+
+.feedback_date
+  font-family: 'Roboto'
+  font-weight: 400
+  font-size: 13.125px
+  line-height: 15px
+  color: #BEBEBE
+
+.feedback_stars
+  display: flex
+  gap: 4px
+  margin: 8px 0 8px
+
+.feedback__list
+  display: flex
+  gap: 18px
+  flex-wrap: wrap
+
+.feedback_text
+  p
+    font-family: Roboto
+    font-size: 12.1875px
+    line-height: 130%
+    color: #414253
+
+.filter_feedback__status
+  display: flex
+  background: #F6F7FE
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  padding: 3px
+  width: max-content
+  .feedback_block
+    padding: 12px 16px 10px 15px
+    cursor: pointer
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    color: #546EDB
+    border-radius: 8px
+    &.active
+      font-weight: 600
+      color: #fff
+      background: #546EDB
+
+.moderation_advers_block
+  background: #858585
+  border-radius: 37px
+  width: 128px
+  height: 28px
+  color: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: auto
+  margin-bottom: 14px
+  &.moderationRed
+    background: #D32121
+
+.cabinet_ads__item .img.imgAdvers
+  min-width: 217px
+
+.flex
+  display: flex
+  align-items: center
+  div
+    margin-right: 10px
+    cursor: pointer
+
+.advers__box___right .redact.redactModeration
+  background: #D32121
+
+.moderation_status_0
+  .advers_prices .advs_price, .advers_prices .advs_price.price_sm
+    color: #858585
+  .advers_bottom_info___block svg path
+    fill: #858585
+  &.moderation_status_2
+    margin-bottom: 48px
+    .title, .advers__about
+      color: #D32121
+
+.moderator_message_error
+  position: absolute
+  left: 0
+  right: 0
+  bottom: -28px
+  z-index: -1
+  height: 50px
+  background: #FDF4F4
+  border-radius: 10px
+  display: flex
+  align-items: flex-end
+  .mess_moderator_err
+    display: flex
+    align-items: center
+    padding: 7px 9px
+    span
+      font-family: 'Roboto'
+      font-weight: 400
+      font-size: 10px
+      line-height: 11px
+      color: #D32121
+  svg
+    margin-right: 5px
+
+@media (min-width: 768px)
+  .cabinet__wallet_wrap
+    .slick-slide
+      width: inherit !important
+
+@media (max-width: 1024px)
+  .create_ads.cabinet_ads__left
+    .btn_save
+      width: calc(100% - 60px) !important
+      right: 0 !important
+
+@media (max-width: 768px)
+  .admin__main_cabinet__flex
+    flex-direction: column
+  .cabinet__content .person_data
+    padding: 0 !important
+  .info_formation
+    .info_adv
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      color: #546EDB
+    .info_response
+      font-weight: 600
+      font-size: 14px
+      line-height: 17px
+      color: #6FE1B8
+  .cabinet__right___block
+    max-width: 209px
+    zoom: 0.85
+    margin: 0
+  .h2_cabinet_main
+    font-weight: 600
+    font-size: 20px
+  .cabinet__content .typography_title_strong
+    font-weight: 600
+    font-size: 20px
+    line-height: 25px
+  .cabinet_for_mobile_btn .btn_save
+    width: -webkit-fill-available
+    margin-left: 46px
+    height: 45px
+    background: #546EDB
+    border-radius: 10px
+    border: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: "Gilroy", sans-serif
+    font-weight: 700
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+    position: relative
+    margin-bottom: 10px
+    transition: all 0.3s ease
+    &:before
+      content: ""
+      background: #6FE1B8
+      border-radius: 10px
+      width: 200px
+      height: 100%
+      position: absolute
+      left: -42px
+      z-index: -1
+    &:after
+      content: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2725%27 height=%2725%27 fill=%27none%27%3E%3Cpath fill=%27%23546EDB%27 fill-rule=%27evenodd%27 d=%27M0 6.597A6.597 6.597 0 0 1 6.597 0h11.806A6.597 6.597 0 0 1 25 6.597v11.806A6.597 6.597 0 0 1 18.403 25H6.597A6.597 6.597 0 0 1 0 18.403V6.597Zm6.597-4.514a4.514 4.514 0 0 0-4.514 4.514v11.806a4.514 4.514 0 0 0 4.514 4.514h11.806a4.514 4.514 0 0 0 4.514-4.514V6.597a4.514 4.514 0 0 0-4.514-4.514H6.597ZM12.5 6.944c.575 0 1.042.467 1.042 1.042v3.472h3.472a1.042 1.042 0 0 1 0 2.084h-3.472v3.472a1.042 1.042 0 0 1-2.084 0v-3.472H7.986a1.042 1.042 0 0 1 0-2.084h3.472V7.986c0-.575.467-1.042 1.042-1.042Z%27 clip-rule=%27evenodd%27/%3E%3C/svg%3E")
+      position: absolute
+      left: -32px
+      top: 10px
+  .cabinet_ads .cabinet_ads__left
+    padding: 0 !important
+  .ads__top_block
+    padding: 16px 8px 20px
+  .advers__flex_top
+    height: inherit
+  .advers_top_flex_left
+    border: none
+    gap: 14px
+    padding: 0
+    min-width: 428px
+  .advers__flex_top .advers_filter_block
+    padding: 0
+  .advers__flex_top .advers_filter_block.active
+    background: transparent
+    border-radius: 0
+  .advers__flex__bottom
+    flex-wrap: wrap
+    position: relative
+  .flex__advers__sorter
+    margin-top: 10px
+  .ads__filters__block
+    padding: 12px 8px 12px 8px
+  .flex_advers__settings
+    width: 100%
+  .advers__settings
+    width: 100%
+    display: flex
+    justify-content: center
+  .open_settings_advers
+    cursor: pointer
+    height: 42px
+  .modalSettings
+    position: absolute
+    right: 10px
+    top: 65px
+    background: #fff
+    border: 1px solid #546EDB
+    box-shadow: 5px 5px 45px rgba(0, 89, 169, 0.15)
+    border-radius: 4px
+    padding: 12px
+    z-index: 5
+  .adv_modal_text
+    display: flex
+    align-items: center
+    font-family: 'Roboto'
+    font-size: 14px
+    line-height: 16px
+  .open_sett_svg
+    width: 14px
+    margin-right: 8px
+  .adv_modal_settings_change__date
+    margin-bottom: 10px
+  .cabinet_ads__item
+    height: inherit
+    flex-direction: column
+  .cabinet_ads__item .img
+    margin-right: 0
+    min-width: 100%
+    min-height: 150px
+    max-height: 150px
+    position: relative
+  .cabinet_ads__item .img img
+    object-fit: initial
+  .cabinet_ads__item .ads__descr_preview
+    padding-right: 0 !important
+  .cabinet_ads__item .ads__descr_preview .title
+    margin-top: 10px !important
+    margin-bottom: 4px !important
+  .advers_prices
+    margin-left: 0
+    gap: 68px
+  .advers__medium__flex
+    flex-direction: column
+  .ads__descr_preview
+    padding: 0 16px 7px 13px
+  .advers__about
+    max-width: 100%
+  .advers_prices
+    margin-top: 7px
+  .advers_prices .advs_price h5
+    font-size: 20px
+  .advers_prices .advs_price span
+    font-size: 11px
+    margin-top: -2px
+  .adver_bottom_info
+    gap: 16px
+    flex-wrap: wrap
+  .advers__box___right
+    border-left: none
+  .cabinet_ads__left .cabinet_ads__item .options
+    z-index: 99
+    display: flex
+    align-items: flex-end !important
+    right: 10px !important
+    bottom: 17px !important
+  .cabinet_ads__item .options .btn
+    width: inherit
+    height: inherit
+  .advers__box___right
+    outline: 2px solid #DDE2F8
+    border-radius: 10px
+    padding: 17px 10px 18px 11px
+  .cabinet_ads__item .options .block
+    top: initial
+    right: 0
+    bottom: -110px
+  .cabinet_ads__item
+    overflow: visible
+  .cabinet_ads__item .options .block
+    border: 1px solid #546EDB
+    box-shadow: 5px 5px 45px rgba(0, 89, 169, 0.15)
+    border-radius: 4px
+  .cabinet_ads__item .options .block .link
+    text-align: left
+    font-size: 14px
+    line-height: 16px
+    margin-bottom: 0
+  .modal_advers__flex
+    display: flex
+    align-items: center
+    margin-bottom: 12px
+    svg
+      margin-right: 9px
+  .cabinet_ads__item .options .block
+    padding: 0
+    height: 100px
+    width: 200px
+    padding-top: 12px
+    padding-left: 12px
+  .imagesMultiple div
+    width: 137px
+    height: 143px
+    object-fit: cover
+  .imagesMultiple
+    flex-wrap: wrap
+  .input_foto_div
+    margin-left: 0
+  .input_wrap_toggle
+    max-width: 100%
+  .create_ads_border
+    padding: 22px 8px 25px
+  .cabinet_ads__left
+    padding: 0 8px
+  .create_ads__center .btn_publish
+    width: 100% !important
+  .cabinet_ads__left
+    padding: 0 !important
+  .cabinet_ads__left .btn_save
+    top: inherit
+    right: inherit
+    margin-left: 50px
+    margin-right: 11px
+  .input_photo_text
+    max-width: 100%
+    .mt14
+      margin-bottom: 14px
+  .request__flex
+    .cabinet_ads__item.ads_item_request
+      flex-direction: row
+      justify-content: space-between
+  .scroll_if_needed_request
+    padding: 15px 8px 15px
+    max-width: 100%
+    width: 100%
+    .cabinet_ads__item.ads_item_request
+      .title
+        margin-top: 6px !important
+        margin-bottom: 5px !important
+    .radio_box
+      margin-top: 0
+  .cabinet_ads__left.cabinet_ads__left_request
+    min-width: inherit
+  .request__flex .cabinet_ads__item
+    width: 100%
+  .request__flex
+    .ads_item_request
+      margin-bottom: 12px !important
+  .request__flex .cabinet_ads__item .img
+    margin-right: 0
+  .scroll_if_needed_request .ads_item_request img
+    width: 90px
+    height: 60px
+  .request__flex .radio h5
+    font-size: 13px
+    line-height: 16px
+  .request__flex .cabinet_ads__item .img
+    min-width: 90px
+  .request__flex .cabinet_ads__item .img
+    width: 90px !important
+  .cabinet_ads__left.cabinet_ads__left_request .cabinet_ads__item .radio_box
+    margin-left: 11px
+  .scroll_if_needed_request .cabinet_ads__item .radio_box
+    width: 100% !important
+  .scroll_if_needed_request .cabinet_ads__item .radio_box .radio
+    width: 45% !important
+  .cabinet_ads__date
+    transition: all 0.8s
+  .cabinet_ads__date.cabinet_ads_date_mobile
+    position: absolute !important
+    transition: all 0.8s
+    top: 0 !important
+    left: 0 !important
+    height: 100% !important
+    background: #fff !important
+    border-radius: 14px
+  .request_flex_title_withArrow
+    display: flex
+    align-items: center
+    svg
+      margin-right: 6px
+  .arrow_back
+    cursor: pointer
+  .request__flex .wrap
+    border: none
+  .request__flex .cabinet_ads__date .timing .request_refuse__btn
+    width: 100%
+  .cabinet_ads__date .timing .btn, .cabinet_ads__date .timing .btn2
+    margin-top: 0 !important
+  .cabinet_ads_date_mobile .cabinet_ads__date .timing
+    flex-wrap: wrap-reverse !important
+  .cabinet_ads_date_mobile.cabinet_ads__date .timing .btn
+    margin-top: 0 !important
+    margin-bottom: 10px
+  .cabinet_ads__date .top .img img
+    height: 62px
+  .request__flex .cabinet_ads__date.cabinet_ads_date_mobile .timing
+    flex-wrap: wrap-reverse !important
+  .request__flex .cabinet_ads__date .block
+    margin: 0 8px 15px 8px
+  .cabinet_ads_date_mobile.cabinet_ads__date .top
+    flex-direction: row !important
+    margin-bottom: 0 !important
+    padding-bottom: 4px
+  .left__cabinet__main_flex .admin__info_top-wrapper
+    display: block
+  .cabinet__wallet_wrap
+    .slick-list
+      padding: 0 8% 0 0 !important
+  .cabinet__content .slick-dots
+    bottom: -18px
+    li
+      height: 8px
+      background: #B6BFE7
+      border-radius: 10px
+      button
+        width: inherit
+        height: inherit
+    li.slick-active
+      width: 45px
+      background: #546EDB
+  .cabinet_info__avatar_and_info_form
+    display: flex
+    align-items: center
+  .advers__add_top
+    padding: 22px 8px 25px
+  .cabinet_ads__left .top
+    margin-bottom: 0 !important
+  .advers__box___right .redact
+    height: 41px
+    width: calc(100% - 46px)
+  .cabinet_ads__item .img.imgAdvers
+    min-width: 100%
+  .moderation_status_0 .advers__box___right .redact
+    width: 100%
+  .moderator_message_error
+    bottom: -36px
+  .moderator_message_error svg
+    width: 25px
+  .flex__advers_768
+    display: flex
+    gap: 4px
+  .cabinet_ads__item
+    justify-content: space-between
+  .cabinet_ads__item .ads__descr_preview
+    flex-basis: 100%
+  .cabinet_ads__item .img.imgAdvers
+    min-height: 180px
+
+@media (max-width: 620px)
+  .admin__info_top-wrapper, .info_contacts, .info_whenBlock, .admin__main_cabinet__flex .right__cabinet__main_flex
+    padding: 14px 8px 24px 9px
+  .admin__info_top-wrapper
+    flex-wrap: wrap
+    .person_img
+      margin: 0 0 10px !important
+      width: 90px
+      height: 90px
+    .select__image:after
+      zoom: 0.8
+    .info_top_second
+      width: 100%
+      margin-bottom: 10px
+    .info_top_second_flex .input_name input
+      height: 46px
+      padding-left: 10px
+  .info_contacts_top
+    flex-wrap: wrap
+    margin-top: 16px
+  .info_when__flex .info_top
+    gap: 14px
+    flex-direction: column
+  .info_soc_block.switchApplication, .info_soc_block.switchWork
+    width: 100%
+  .info_bottom___flex
+    flex-wrap: wrap
+  .info_bottom___right
+    max-width: 100%
+    margin-top: 12px
+  .right__cabinet__main_flex
+    .cabinet__right___block
+      margin: 0
+      zoom: 1
+      max-width: 100%
+  .main .container
+    padding: 0 6px !important
+  .advers_top_flex_left
+    min-width: 340px
+
+@media (max-width: 560px)
+  .flex__advers_768
+    display: block
+  .cabinet_ads__item .img.imgAdvers
+    min-height: 226px
+  .flex__advers_768
+    padding: 16px 8px 16px
+
+@media (max-width: 460px)
+  .info_contacts__led
+    margin-top: -30px
+    margin-bottom: 12px
+
+@media (max-width: 420px)
+  .cabinet_ads__item .img.imgAdvers
+    min-height: 196px
+  .feedback_item
+    max-width: 100%
+    min-width: 100%
+
+@media (max-width: 340px)
+  .cabinet_ads__item .img.imgAdvers
+    min-height: 168px

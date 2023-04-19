@@ -1,0 +1,3843 @@
+@import "../styles/variables.sass"
+
+.cabinet__redesign_container
+  display: flex
+  flex-direction: column
+  height: 100%
+  .cabinet__redesign_title
+    @include h-28
+  .cabinet__redesign_subtitle
+    @include  p-14-500
+    margin-bottom: 8px
+.cabinet__info_avatar
+  position: relative
+  &_img
+    position: absolute
+    width: 115px
+    height: 115px
+    object-fit: cover
+    border-radius: 100%
+.cabinet__box
+  display: flex
+  padding: 40px 0
+  gap: 20px
+.cabinet__content
+  width: 100%
+  min-height: 700px
+.cabinet__aside
+  background: #fff
+  border-radius: 14px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-width: 280px
+  height: 730px
+.no_img
+  background: #c4c4c4
+  border-radius: 100%
+
+.icon24 img
+  width: 24px
+
+.cabinet__person
+  display: flex
+  align-items: center
+  padding: 18px
+  position: relative
+
+.cabinet__img
+  width: 74px
+  height: 74px
+  position: relative
+  overflow: hidden
+  margin-right: 23px
+  border-radius: 50%
+
+.cabinet__img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.cabinet__name
+  font-family: "Roboto", sans-serif
+  font-weight: 600
+  font-size: 18px
+  line-height: 21px
+  color: #000000
+  margin-bottom: 7px
+
+.cabinet__grade
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 300
+  font-size: 15px
+  line-height: 18px
+  color: rgba(0, 0, 0, 0.5)
+  gap: 10px
+  path
+    fill: rgba(255, 168, 0, 0.9)
+
+.cabinet__nav
+  background: $blue
+  border-radius: 14px
+  padding: 25px 0 25px 17px
+  height: 100%
+
+.cabinet__item
+  padding: 10px 0
+  width: 100%
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #FFFFFF
+  transition: all 0.3s ease
+  position: relative
+  padding-left: 4px
+  border-radius: 6px 0px 0px 6px
+  gap: 14px
+
+.cabinet__item .icon
+  width: 26px
+  height: 26px
+  background: rgba(0, 0, 0, 0.05)
+  border-radius: 6px
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 6px
+  transition: all 0.3s ease-in-out
+
+.cabinet__item_counter
+  width: 22px
+  height: 22px
+  position: absolute
+  top: 50%
+  right: 15px
+  transform: translateY(-50%)
+  display: flex
+  align-items: center
+  justify-content: center
+  background: $salad
+  border-radius: 100%
+  color: #fff
+  opacity: 0.6
+
+.cabinet__item_notif
+  background: $orange
+
+.cabinet__item.active
+  background: rgba(0, 0, 0, 0.05)
+  font-weight: 500
+  color: $salad
+  .cabinet__item_counter
+    opacity: 1
+  .icon
+    background: #fff
+  path
+    fill: $blue
+  &::after
+    content: ""
+    width: 3px
+    height: 100%
+    background: url('../assets/images/nav-active.svg') no-repeat center/cover
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    border-radius: 8px 0 0 8px
+
+.cabinet__item:hover
+  background: rgba(0, 0, 0, 0.05)
+  .icon
+    background: #fff
+  path
+    fill: $blue
+
+.exit_link
+  justify-content: center
+  padding: 20px
+  display: flex
+  border: 0
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  color: $blue
+  cursor: pointer
+  transition: all 0.2s ease
+  margin-top: -30px
+  background-color: $salad
+  border-radius: 14px
+  align-items: center
+  gap: 6px
+
+.exit_link svg path
+  -webkit-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+.exit_link:hover
+  color: $dark-blue
+
+.exit_link:hover svg path
+  fill: $dark-blue
+
+.person_data
+  max-width: 100%
+  width: 100%
+  background: #FFFFFF
+  border-radius: 10px
+  position: relative
+  border: 1px solid #DDE2F8
+
+.person_data .creation
+  width: 100%
+  height: 80px
+  background: #FFFFFF
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 15px 20px 19px 18px
+  position: relative
+
+.person_data .creation .title
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-bottom: 13px
+
+.person_data .creation span
+  display: block
+  background: #F3F3F3
+  border-radius: 30px
+  position: absolute
+  top: 15px
+  right: 12px
+  padding: 6px 12px
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  color: #4088DD
+
+.person_data .creation .box
+  justify-content: space-between
+
+.person_data .creation .link
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  color: #4088DD
+
+.person_data .creation .date
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  color: #4088DD
+
+.person_data .btn_save
+  position: absolute
+  top: 34px
+  right: 35px
+  width: 150px
+  height: 40px
+  background: #546EDB
+  border-radius: 10px
+  border: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Gilroy", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 17px
+  color: #FFFFFF
+  transition: all 0.3s ease
+
+.person_data .btn_save:hover
+  opacity: 0.9
+
+.person_data .box
+  display: flex
+  flex-wrap: wrap
+
+.person_data .box .right
+  padding-top: 26px
+
+.person_data .box_input
+  margin-bottom: 54px
+
+.person_data .box_input .right
+  padding-top: 108px
+
+.person_data .box_input .right .input
+  margin-bottom: 10px !important
+
+.person_data .left
+  width: 360px
+  margin-right: 20px
+
+.person_data .right
+  width: 360px
+
+.person_data h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 13px
+
+.person_data h5
+  font-family: "Roboto", sans-serif
+  font-weight: 300
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 17px
+
+.person_data .input
+  position: relative
+
+.person_data .input .icon
+  position: absolute
+  top: 50%
+  right: 24px
+  transform: translateY(-50%)
+
+.person_data .input input
+  width: 100%
+  height: 48px
+  background: $purple-light
+  border-radius: 10px
+  padding: 0 50px
+  font-family: "Gilroy", sans-serif
+  font-weight: 500
+  font-size: 14px
+  line-height: 16px
+  color: #414253
+  border: 1px solid rgba(84, 110, 219, 0.2)
+
+.person_data .input.inputMainName input
+  padding-left: 18px
+
+.person_data .input input::-webkit-input-placeholder
+  color: #414253
+
+.person_data .input input::-moz-placeholder
+  color: #414253
+
+.person_data .input input:-ms-input-placeholder
+  color: #414253
+
+.person_data .input input::-ms-input-placeholder
+  color: #414253
+
+.person_data .input input::placeholder
+  color: #414253
+
+.person_data .input2
+  width: 100%
+  height: 60px
+  background: $purple-light
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 13px
+  margin-bottom: 13px
+  p
+    width: 100%
+    height: 100%
+    border-radius: 13px
+    padding: 0 20px
+    border: 0
+    display: flex
+    align-items: center
+
+.person_data .input2 h6
+  margin-bottom: 6px
+  padding-top: 10px
+  padding-left: 14px
+
+.person_data .input2 input
+  width: 100%
+  border: 0
+  background-color: transparent
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  color: #4088DD
+  padding-left: 14px
+  padding-right: 14px
+
+.person_data .input2 input::-webkit-input-placeholder
+  color: #4088DD
+
+.person_data .input2 input::-moz-placeholder
+  color: #4088DD
+
+.person_data .input2 input:-ms-input-placeholder
+  color: #4088DD
+
+.person_data .input2 input::-ms-input-placeholder
+  color: #4088DD
+
+.person_data .input2 input::placeholder
+  color: #4088DD
+
+.person_img
+  width: 115px
+  height: 115px
+  position: relative
+  margin-left: 0
+  background: #E3E3E3
+  border-radius: 100%
+  margin-right: 20px
+
+.person_img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  border-radius: 100%
+  object-fit: cover
+  height: 100%
+
+.select__image
+  &:after
+    content: url('../assets/images/upload.svg')
+    position: absolute
+    width: 25px
+    height: 25px
+    cursor: pointer
+    right: 0
+    bottom: 0
+    background-color: $blue
+    padding: 5px
+    border-radius: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-end
+
+.cabinet_ads
+  display: flex
+
+.create_ads__form-mobile
+  .create_ads__back
+    margin-bottom: 20px
+.cabinet_ads.mobile
+  display: flex
+  flex-direction: column
+  .create_ads__back
+    margin-bottom: 10px
+
+.name__error
+  color: red
+  position: absolute
+  margin-top: -20px
+  font-size: 14px
+
+.ads__descr_preview
+  width: 100%
+  padding-right: 10px
+
+.cabinet_ads__left
+  width: 100%
+  background: #FFFFFF
+  border-radius: 14px
+  position: relative
+  border: 1px solid #DDE2F8
+  margin-top: 6px
+  z-index: 0
+
+.advers_top_flex_right
+  position: relative
+  z-index: 33
+
+.cabinet_ads__left .btn_save
+  margin: 20px 0
+  width: 196px
+  height: 45px
+  background: #546EDB
+  border-radius: 10px
+  border: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Gilroy", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 17px
+  color: #FFFFFF
+  position: relative
+  transition: all 0.3s ease
+  &:after
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none'%3E%3Cpath fill='%23546EDB' fill-rule='evenodd' d='M0 6.597A6.597 6.597 0 0 1 6.597 0h11.806A6.597 6.597 0 0 1 25 6.597v11.806A6.597 6.597 0 0 1 18.403 25H6.597A6.597 6.597 0 0 1 0 18.403V6.597Zm6.597-4.514a4.514 4.514 0 0 0-4.514 4.514v11.806a4.514 4.514 0 0 0 4.514 4.514h11.806a4.514 4.514 0 0 0 4.514-4.514V6.597a4.514 4.514 0 0 0-4.514-4.514H6.597ZM12.5 6.944c.575 0 1.042.467 1.042 1.042v3.472h3.472a1.042 1.042 0 0 1 0 2.084h-3.472v3.472a1.042 1.042 0 0 1-2.084 0v-3.472H7.986a1.042 1.042 0 0 1 0-2.084h3.472V7.986c0-.575.467-1.042 1.042-1.042Z' clip-rule='evenodd'/%3E%3C/svg%3E")
+    position: absolute
+    left: -32px
+    top: 10px
+
+  &:before
+    content: ''
+    background: #6FE1B8
+    border-radius: 10px
+    width: 200px
+    height: 100%
+    position: absolute
+    left: -42px
+    z-index: -1
+
+.cabinet_ads__left h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 42px
+
+.cabinet_ads__left .top
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+
+.cabinet_ads__left .top .item
+  display: flex
+  align-items: center
+  padding: 10px 20px 8px 8px
+  height: 48px
+  cursor: pointer
+  transition: all 0.2s ease
+  background: $purple-light
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+
+.cabinet_ads__left .top .item .img
+  position: relative
+  overflow: hidden
+  z-index: 2
+  margin-right: 18px
+  &:after
+    content: ''
+    display: block
+    border-radius: 100%
+    z-index: -1
+    position: absolute
+    width: 31px
+    height: 31px
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    background: $salad
+
+.cabinet_ads__left .top .item .img img
+  max-width: 44px
+  height: auto
+
+.cabinet_ads__left .top .item .title
+  @include h-20
+  transition: all 0.2s ease
+  margin-bottom: 4px
+
+.cabinet_ads__left .top .item p
+  margin-left: 10px
+  color: rgba(111, 225, 184, 1)
+  font-weight: 600
+  font-size: 16px
+  line-height: 20px
+
+.cabinet_ads__left .top .item:nth-child(3n)
+  margin-right: 0
+
+.cabinet_ads__left .top .item:hover
+  border: 1px solid #4088DD
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
+
+.cabinet_ads__left .top .item:hover .title
+  color: #4088DD
+
+.cabinet_ads__left .top .item.active
+  border: 1px solid $blue
+  background: $blue
+
+.cabinet_ads__left .top .item.active .title
+  color: $white
+
+.cabinet_ads__right
+  width: 50%
+
+.cabinet_ads__right .wrap
+  height: 100%
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  overflow: hidden
+
+.cabinet_ads__right .img
+  width: 100%
+  height: 280px
+  position: relative
+  overflow: hidden
+  margin-bottom: 13px
+
+.cabinet_ads__right .img img
+  width: 100%
+  height: 280px
+  object-fit: cover
+
+.cabinet_ads__right .title_box
+  display: flex
+  margin-bottom: 18px
+  padding: 0 16px
+
+.cabinet_ads__right .title
+  width: 270px
+  font-family: "Gilroy", sans-serif
+  font-weight: 800
+  font-size: 16px
+  line-height: 134.75%
+  text-transform: uppercase
+  color: #000000
+
+.cabinet_ads__right .radio_box
+  width: 268px
+
+.cabinet_ads__right .content
+  padding: 0 12px 40px 15px
+
+.cabinet_ads__right .content h5
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  text-transform: capitalize
+  color: #414253
+  margin-bottom: 7px
+
+.cabinet_ads__right .content .text
+  max-width: 518px
+  width: 100%
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #858585
+  margin-bottom: 20px
+
+.cabinet_ads__right .content .status
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 60px
+  position: relative
+  border-radius: 40px
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  margin-bottom: 14px
+
+.cabinet_ads__right .content .status svg
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 27px
+
+.cabinet_ads__right .content .status.active
+  background: rgba(111, 225, 184, 0.1)
+  color: #6FE1B8
+
+.cabinet_ads__right .content .status.active svg path
+  fill: #6FE1B8
+
+.cabinet_ads__right .content .status.notactive
+  background: rgba(247, 169, 40, 0.1)
+  color: #F7A928
+
+.cabinet_ads__right .content .status.notactive svg path
+  fill: #F7A928
+
+.cabinet_ads__right .person
+  width: 100%
+  height: 60px
+  background: #FFFFFF
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  display: flex
+  align-items: center
+  padding: 10px 27px 10px 23px
+  margin-bottom: 90px
+
+.cabinet_ads__right .person .person_img
+  width: 40px
+  height: 40px
+  margin: 0
+  margin-right: 17px
+
+.cabinet_ads__right .person .name
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #000000
+
+.cabinet_ads__right .person .grade
+  margin-left: auto
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #F7A928
+
+.cabinet_ads__right .person .grade svg
+  margin-right: 8px
+
+.cabinet_ads__right .buttons
+  display: flex
+  max-width: 500px
+  width: 100%
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 20px
+
+.cabinet_ads__right .buttons .edit, .cabinet_ads__right .buttons .deactivate, .cabinet_ads__right .buttons .delete
+  display: flex
+  align-items: center
+  border: 0
+  background-color: transparent
+  font-family: "Roboto", sans-serif
+  font-weight: 600
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  transition: all 0.2s ease
+
+.cabinet_ads__right .buttons .edit svg, .cabinet_ads__right .buttons .deactivate svg, .cabinet_ads__right .buttons .delete svg
+  margin-right: 4px
+
+.cabinet_ads__right .buttons .edit svg path, .cabinet_ads__right .buttons .deactivate svg path, .cabinet_ads__right .buttons .delete svg path
+  transition: all 0.2s ease
+
+.cabinet_ads__right .buttons .edit:hover
+  color: #546EDB
+
+.cabinet_ads__right .buttons .edit:hover svg path
+  fill: #546EDB
+
+.cabinet_ads__right .buttons .deactivate:hover
+  color: #F7A928
+
+.cabinet_ads__right .buttons .deactivate:hover svg path
+  fill: #F7A928
+
+.cabinet_ads__right .buttons .delete:hover
+  color: #F11147
+
+.cabinet_ads__right .buttons .delete:hover svg path
+  fill: #F11147
+
+.cabinet_ads__date .block
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 24px 20px 22px 24px
+  margin-bottom: 20px
+
+.cabinet_ads__date .top
+  display: flex
+  padding-bottom: 16px
+
+.cabinet_ads__date .top .img
+  width: 50px
+  height: 50px
+  position: relative
+  overflow: hidden
+  margin-right: 17px
+
+.cabinet_ads__date .top .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: auto
+
+.cabinet_ads__date .top .name
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-top: 4px
+  margin-bottom: 5px
+
+.cabinet_ads__date .top .date
+  font-family: "Gilroy"
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #727070
+
+.cabinet_ads__date .top .grade
+  display: flex
+  margin-top: 4px
+  margin-left: auto
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #F9B023
+
+.cabinet_ads__date .top .grade svg
+  margin-right: 8px
+
+.cabinet_ads__date .bottom
+  padding-top: 15px
+
+.cabinet_ads__date .timing .btn
+  width: 100%
+  height: 50px
+  background: #6FE1B8
+  border-radius: 40px
+  border: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  color: #FFFFFF
+  transition: all 0.3s ease
+
+.cabinet_ads__date .timing .btn:hover
+  background: #41d39d
+
+.cabinet_ads__date .timing .btn2
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  text-decoration-line: underline
+  color: #4088DD
+  border: 0
+  background-color: transparent
+
+.cabinet_ads__date .timing h5
+  margin-left: auto
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #4088DD
+  margin-right: 15px
+
+.cabinet_ads__date .timing .time
+  background: #F3F3F3
+  border-radius: 40px
+  padding: 10px 20px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #414253
+
+.cabinet_ads__date .call
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+.cabinet_ads__date .call .link
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #414253
+
+.cabinet_ads__date .call .link svg
+  margin-left: 17px
+
+.cabinet_ads__date .call .icon .item
+  margin-left: 20px
+
+.loads_advers
+  position: relative
+  min-height: 156px
+
+.cabinet_ads__item
+  width: 96%
+  background: #FFFFFF
+  border: 2px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  margin-bottom: 20px
+  display: flex
+  transition: all 0.3s ease
+  position: relative
+  .container_checkbox
+    margin-left: 9px
+
+.cabinet_ads__item .img
+  position: relative
+  overflow: hidden
+  margin-right: 16px
+
+.cabinet_ads__item .img img
+  position: absolute
+  object-fit: cover
+  width: 100%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  height: 100%
+  border-radius: 10px
+
+.cabinet_ads__item .title
+  font-weight: 700
+  font-size: 16px
+  line-height: 20px
+  color: #414253
+  margin-top: 15px
+  margin-bottom: 4px
+
+.cabinet_ads__item .options
+  position: absolute
+  top: 27px
+  right: 30px
+
+.cabinet_ads__item .options .btn
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: space-between
+  border: 0
+  background-color: transparent
+  width: 18px
+  height: 18px
+
+.cabinet_ads__item .options .btn span
+  display: block
+  width: 4px
+  height: 4px
+  background: #414253
+  border-radius: 50%
+
+.cabinet_ads__item .options .block
+  display: none
+  width: 190px
+  height: 125px
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  position: absolute
+  top: -4px
+  right: 14px
+  z-index: 2
+  padding-top: 17px
+  padding-right: 23px
+
+.cabinet_ads__item .options .block .link
+  display: block
+  text-align: end
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-bottom: 16px
+  cursor: pointer
+  transition: all 0.2s ease
+
+.cabinet_ads__item .options .block .link:nth-child(1):hover
+  color: #6FE1B8
+
+.cabinet_ads__item .options .block .link:nth-child(2):hover
+  color: #F7A928
+
+.cabinet_ads__item .options .block .link:nth-child(3):hover
+  color: #F11147
+
+.cabinet_ads__item .options .btn.active + .block
+  display: block
+
+.cabinet_ads__item:hover
+  background: #F4F9FF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+
+.cabinet_responses
+  width: 100%
+  min-height: 755px
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 23px
+
+.cabinet__content__title
+  margin-bottom: 36px
+  display: flex
+  justify-content: space-between
+
+.cabinet__content__title .title
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 12px
+
+.cabinet__content__title .title2
+  font-family: "Roboto", sans-serif
+  font-weight: 300
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+
+.cabinet_responses__box
+  display: flex
+  flex-wrap: wrap
+
+.cabinet_responses__block
+  display: block
+  width: 327px
+  height: 360px
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-right: 20px
+  margin-bottom: 20px
+  padding: 14px 20px 30px 20px
+
+.cabinet_responses__block .top
+  display: flex
+  padding-bottom: 16px
+  border-bottom: 1px solid #E5E5E5
+
+.cabinet_responses__block .top .img
+  width: 50px
+  height: 50px
+  position: relative
+  overflow: hidden
+  margin-right: 17px
+
+.cabinet_responses__block .top .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: 50px
+
+.cabinet_responses__block .top .name
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-bottom: 5px
+
+.cabinet_responses__block .top .time
+  font-family: "Gilroy", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #727070
+
+.cabinet_responses__block .top .time span
+  margin-left: 8px
+
+.cabinet_responses__block .top .grade
+  margin-left: auto
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #F9B023
+  display: flex
+  flex: 4
+  justify-content: flex-end
+
+.cabinet_responses__block .top .grade svg
+  margin-right: 8px
+
+.cabinet_responses__block .call
+  display: flex
+  justify-content: space-between
+  padding-top: 16px
+  padding-bottom: 20px
+
+.cabinet_responses__block .call .link
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #414253
+
+.cabinet_responses__block .call .link svg
+  margin-right: 17px
+
+.cabinet_responses__block .call .icon
+  display: flex
+
+.cabinet_responses__block .call .icon .item
+  margin-left: 20px
+
+.cabinet_responses__block .product_wrap
+  display: flex
+  margin-bottom: 22px
+  height: 90px
+
+.cabinet_responses__block .product_wrap .img
+  width: 80px
+  height: 75px
+  position: relative
+  overflow: hidden
+  border-radius: 10px
+  margin-right: 20px
+
+.cabinet_responses__block .product_wrap .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: auto
+  height: 100%
+
+.cabinet_responses__block .product_wrap .title
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  text-transform: uppercase
+  color: #414253
+  margin-bottom: 4px
+
+.cabinet_responses__block .product_wrap .code
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 16px
+
+.cabinet_responses__block .product_wrap .price
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 18px
+  line-height: 21px
+  text-transform: uppercase
+  color: #546EDB
+
+.cabinet_responses__block .product_wrap .price span
+  margin-left: 8px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #858585
+
+.cabinet_responses__block .block
+  background: #F3F3F3
+  border-radius: 10px
+  padding: 13px 17px 14px 14px
+
+.cabinet_responses__block .block .timing
+  display: flex
+  font-family: "Roboto"
+  font-style: normal
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #4088DD
+  margin-bottom: 16px
+
+.cabinet_responses__block .block .timing .time
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #414253
+  margin-left: auto
+  text-transform: lowercase
+
+.cabinet_responses__block .block .text
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #414253
+
+.cabinet__notifications
+  display: flex
+
+.cabinet__notifications__aside
+  width: 388px
+  height: 755px
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-right: 18px
+  padding: 30px 0
+
+.cabinet__notifications__aside .wrap
+  height: 650px
+  overflow-y: auto
+  padding: 0 30px
+  padding-top: 20px
+
+.cabinet__notifications__aside .title
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  padding: 0 30px
+  margin-bottom: 16px
+
+.cabinet__notifications__aside .request
+  display: block
+  width: 100%
+  height: 186px
+  background: #FFFFFF
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-bottom: 10px
+  padding: 20px 15px
+
+.cabinet__notifications__aside .request .block
+  background: rgba(241, 17, 71, 0.06)
+  border-radius: 10px
+  padding: 12px 16px 10px 16px
+  margin-top: 14px
+
+.cabinet__notifications__aside .request .block h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #727070
+  margin-bottom: 7px
+
+.cabinet__notifications__aside .request_title
+  display: flex
+  font-family: "Gilroy", sans-serif
+  font-weight: 800
+  font-size: 14px
+  line-height: 17px
+  color: #4088DD
+  margin-bottom: 12px
+
+.cabinet__notifications__aside .request_title .time
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-left: auto
+
+.cabinet__notifications__aside .request.red .request_title
+  color: #D21A47
+
+.cabinet__notifications__aside .request_person
+  display: flex
+  align-items: center
+  background: #F3F3F3
+  border-radius: 10px
+  padding: 10px 13px
+  margin-bottom: 20px
+
+.cabinet__notifications__aside .request_person .img
+  width: 30px
+  height: 30px
+  position: relative
+  overflow: hidden
+  margin-right: 13px
+
+.cabinet__notifications__aside .request_person .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: auto
+
+.cabinet__notifications__aside .request_person .name
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+
+.cabinet__notifications__aside .request_person .grade
+  margin-left: auto
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #F9B023
+
+.cabinet__notifications__aside .request_person .grade svg
+  margin-right: 8px
+
+.cabinet__notifications__aside .request.blue
+  background: #F5FAFF
+  border: 1px solid #4088DD
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+
+.cabinet__notifications__aside .request.blue .request_person
+  background-color: #FFFFFF
+
+.cabinet__notifications__aside .request.red
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+
+.cabinet__notifications__aside .text
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #727070
+  margin-bottom: 6px
+
+.cabinet__notifications__aside .title2
+  display: flex
+  align-items: center
+
+.cabinet__notifications__aside .title2 h5
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  text-transform: uppercase
+  color: #414253
+
+.cabinet__notifications__aside .title2 .code
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-left: 8px
+
+.cabinet__notifications__content
+  width: 552px
+  height: 755px
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 32px 24px 30px 40px
+
+.cabinet__notifications__content .product_wrap
+  display: flex
+  margin-bottom: 22px
+
+.cabinet__notifications__content .product_wrap .img
+  width: 80px
+  height: 75px
+  position: relative
+  overflow: hidden
+  border-radius: 10px
+  margin-right: 20px
+
+.cabinet__notifications__content .product_wrap .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: auto
+  height: 100%
+
+.cabinet__notifications__content .product_wrap .title
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  text-transform: uppercase
+  color: #414253
+  margin-bottom: 4px
+
+.cabinet__notifications__content .product_wrap .code
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 16px
+
+.cabinet__notifications__content .product_wrap .price
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 18px
+  line-height: 21px
+  text-transform: uppercase
+  color: #546EDB
+
+.cabinet__notifications__content .product_wrap .price span
+  margin-left: 8px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #858585
+
+.cabinet__notifications__content .person
+  display: flex
+  border-bottom: 1px solid #E5E5E5
+  padding-bottom: 16px
+
+.cabinet__notifications__content .person .img
+  width: 50px
+  height: 50px
+  position: relative
+  overflow: hidden
+  margin-right: 17px
+
+.cabinet__notifications__content .person .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: auto
+
+.cabinet__notifications__content .person .name
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-top: 4px
+  margin-bottom: 5px
+
+.cabinet__notifications__content .person .time
+  font-family: "Gilroy", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #727070
+
+.cabinet__notifications__content .person .time span
+  margin-left: 8px
+
+.cabinet__notifications__content .person .grade
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin-left: auto
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #F9B023
+
+.cabinet__notifications__content .person .grade svg
+  margin-right: 8px
+
+.cabinet__notifications__content .call
+  display: flex
+  justify-content: space-between
+  margin-top: 15px
+  margin-bottom: 20px
+
+.cabinet__notifications__content .call .link
+  display: flex
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #414253
+
+.cabinet__notifications__content .call .link svg
+  margin-right: 17px
+
+.cabinet__notifications__content .call .icon
+  display: block
+
+.cabinet__notifications__content .call .icon .item
+  margin-left: 20px
+
+.cabinet__notifications__content .block
+  background: #F3F3F3
+  border-radius: 10px
+  padding: 13px 20px 20px 15px
+
+.cabinet__notifications__content .block h5
+  margin-bottom: 24px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #4088DD
+
+.cabinet__notifications__content .block h5 .time
+  margin-left: auto
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #414253
+
+.cabinet__notifications__content .text
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  text-transform: capitalize
+  color: #414253
+
+.cabinet_favorites
+  width: 1440px
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 31px 34px 21px 34px
+
+.cabinet_favorites h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 32px
+
+.cabinet_favorites .box
+  display: flex
+  flex-wrap: wrap
+
+.cabinet_favorites .top
+  display: flex
+  margin-bottom: 22px
+
+.cabinet_favorites .top .item
+  display: flex
+  width: 250px
+  height: 70px
+  background: #FFFFFF
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-right: 10px
+  padding-top: 13px
+  padding-left: 15px
+  border: 1px solid transparent
+  -webkit-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+.cabinet_favorites .top .item .img
+  width: 66px
+  height: 50px
+  position: relative
+  overflow: hidden
+  margin-right: 33px
+
+.cabinet_favorites .top .item .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: auto
+
+.cabinet_favorites .top .item .title
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  transition: all 0.2s ease
+  margin-bottom: 7px
+
+.cabinet_favorites .top .item p
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #414253
+
+.cabinet_favorites .top .item:nth-child(3n)
+  margin-right: 0
+
+.cabinet_favorites .top .item:hover
+  border: 1px solid #4088DD
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2)
+
+.cabinet_favorites .top .item:hover .title
+  color: #4088DD
+
+.cabinet_favorites .top .item.active
+  border: 1px solid #4088DD
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2)
+
+.cabinet_favorites .top .item.active .title
+  color: #4088DD
+
+.regulations__box
+  display: flex
+
+.regulations__left
+  width: 415px
+  min-height: 817px
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 30px 52px 30px 33px
+  margin-right: 16px
+
+.regulations__left .check input
+  width: 0
+  height: 0
+  position: relative
+  z-index: -1
+
+.regulations__left .check label
+  display: flex
+  padding: 16px 18px
+  padding-right: 13px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-bottom: 10px
+  cursor: pointer
+
+.regulations__left .check label span
+  display: block
+  min-width: 42px
+  height: 26px
+  margin-left: auto
+  background: #F3F3F3
+  border-radius: 30px
+  position: relative
+
+.regulations__left .check label span::after
+  content: ""
+  width: 16px
+  height: 16px
+  background: #6FE1B8
+  border-radius: 50%
+  position: absolute
+  top: 50%
+  left: 5px
+  transition: all 0.2s ease
+  transform: translateY(-50%)
+
+.regulations__left .check input:checked + label span
+  background: #6FE1B8
+
+.regulations__left .check input:checked + label span::after
+  left: auto
+  right: 5px
+  background-color: #fff
+
+.regulations__left h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 30px
+
+.regulations__left .nav .item
+  display: block
+  padding: 16px 18px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-bottom: 10px
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+
+.regulations__left .nav .item.active
+  background: #546EDB
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  color: #FFFFFF
+
+.regulations__content
+  width: 1004px
+  min-height: 817px
+  padding: 26px 40px 30px 24px
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+
+.regulations__content .logo
+  margin-bottom: 30px
+
+.regulations__content .title
+  font-family: "Roboto", sans-serif
+  font-weight: 600
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  margin-bottom: 18px
+
+.regulations__content .text
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #858585
+  margin-bottom: 24px
+
+.regulations__content h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 36px
+
+.regulations__content .box
+  display: flex
+
+.regulations__content .box .img
+  margin-left: auto
+  margin-right: 40px
+
+.regulations__content .text2
+  width: 619px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #858585
+
+.regulations__content .icon
+  display: flex
+  margin-top: 50px
+
+.regulations__content .icon img
+  margin-right: 25px
+
+.cabinet__chat
+  width: 600px
+  height: 817px
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  overflow: hidden
+  position: relative
+
+.cabinet__chat h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  padding: 31px 30px 30px 33px
+  background-color: #fff
+  position: relative
+  z-index: 2
+
+.cabinet__chat .form
+  display: flex
+  padding: 16px 19px 16px 17px
+  background-color: #fff
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+
+.cabinet__chat .form .input
+  width: 487px
+  height: 60px
+  position: relative
+
+.cabinet__chat .form .input_text
+  width: 100%
+  height: 60px
+  background: #F6F8F9
+  border-radius: 5px
+  border: 0
+  padding: 0 20px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #414253
+
+.cabinet__chat .form .input_file
+  width: 22px
+  height: 22px
+  position: absolute
+  top: 50%
+  right: 19px
+  transform: translateY(-50%)
+
+.cabinet__chat .form .input_file::after
+  content: ""
+  width: 22px
+  height: 22px
+  background: #fff url('../assets/images/file.svg') no-repeat center/cover
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  border-radius: 3px
+
+.cabinet__chat .form .btn
+  width: 65px
+  height: 60px
+  background: #546EDB
+  border-radius: 6px
+  border: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-left: 12px
+
+.cabinet__chat__wrap
+  width: 100%
+  height: 650px
+  background-color: #fff
+  position: relative
+  padding: 43px 45px 43px 17px
+
+.cabinet__chat__wrap .chat_content
+  height: 100%
+  overflow-y: scroll
+  position: relative
+  z-index: 2
+
+.cabinet__chat__wrap .chat_content::-webkit-scrollbar
+  width: 0
+
+.cabinet__chat__wrap .chat_container
+  width: 100%
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+.cabinet__chat__wrap .chat_date
+  font-weight: 600
+  font-size: 12px
+  line-height: 14px
+  color: rgba(0, 0, 0, 0.3)
+  margin-top: 72px
+  margin-bottom: 16px
+
+.cabinet__chat__wrap .chat_date.center
+  text-align: center
+
+.cabinet__chat__wrap .text
+  display: inline-block
+  margin-bottom: 2px
+  font-weight: 400
+  font-size: 17px
+  line-height: 20px
+  letter-spacing: -0.41px
+  color: #000000
+  padding: 8px 12px
+  background: rgba(0, 0, 0, 0.06)
+
+.cabinet__chat__wrap .icon
+  width: 83px
+  margin-bottom: 4px
+  margin-left: auto
+
+.cabinet__chat__wrap .chat_right
+  text-align: end
+  max-width: 50%
+  margin-left: auto
+  position: relative
+  padding-right: 30px
+  margin-top: 70px
+
+.cabinet__chat__wrap .chat_right .wrap
+  border-radius: 18px
+  overflow: hidden
+
+.cabinet__chat__wrap .chat_right .text
+  border-radius: 18px 4px 4px 18px
+
+.cabinet__chat__wrap .chat_right::after
+  content: ""
+  width: 16px
+  height: 16px
+  position: absolute
+  bottom: 0
+  right: 8px
+  background: url('../assets/images/not-read.svg') no-repeat center/cover
+
+.cabinet__chat__wrap .chat_left
+  max-width: 50%
+  margin-top: 90px
+  padding-left: 40px
+  position: relative
+
+.cabinet__chat__wrap .chat_left .img
+  width: 30px
+  height: 30px
+  position: absolute
+  bottom: 0
+  left: 0
+  border-radius: 50%
+  overflow: hidden
+
+.cabinet__chat__wrap .chat_left .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 101%
+  height: auto
+
+.cabinet__chat__wrap .chat_left .text
+  border-radius: 4px 18px 18px 4px
+
+.cabinet__chat__wrap .chat_left .wrap
+  border-radius: 18px
+  overflow: hidden
+
+.cabinet__chat__wrap .chat_right.read::after
+  background: url('../assets/images/read.svg') no-repeat center/cover
+
+.create_ads__back
+  align-items: center
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 42px
+  cursor: pointer
+
+.create_ads__back svg
+  margin-right: 15px
+
+.create_ads__back:hover
+  color: #4088DD
+
+.create_ads__back:hover svg path
+  fill: #4088DD
+
+.create_ads__left
+  min-height: 755px
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 30px 17px 30px 23px
+  margin-right: 20px
+
+.create_ads__left .top
+  width: 100%
+
+.create_ads__left .top .item
+  width: 100%
+  cursor: pointer
+  margin-bottom: 10px
+  display: flex
+  height: 70px
+  background: #FFFFFF
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 10px
+  border: 1px solid transparent
+
+  -webkit-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+.create_ads__left .top .item .img
+  width: 66px
+  height: 50px
+  position: relative
+  overflow: hidden
+  margin-right: 33px
+
+.create_ads__left .top .item .img img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: auto
+
+.create_ads__left .top .item .title
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #414253
+  transition: all 0.2s ease
+  margin-bottom: 7px
+
+.create_ads__left .top .item p
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 12px
+  line-height: 14px
+  color: #414253
+
+.create_ads__left .top .item:nth-child(3n)
+  margin-right: 0
+
+.create_ads__left .top .item:hover
+  border: 1px solid #4088DD
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2)
+
+.create_ads__left .top .item:hover .title
+  color: #4088DD
+
+.create_ads__left .top .item.active
+  border: 1px solid #4088DD
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2)
+
+.create_ads__left .top .item.active .title
+  color: #4088DD
+.create_ads__center
+  position: relative
+
+.create_ads__center h6
+  font-family: "Roboto", sans-serif
+  font-weight: 700
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+  margin-bottom: 50px
+
+.create_ads__center .title_select
+  margin-top: 18px
+  font-weight: 800
+  font-size: 12px
+  line-height: 18px
+  color: #414253
+  margin-bottom: 20px
+
+.create_ads__center .btn_publish
+  width: 214px
+  background: #546EDB
+  border-radius: 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: 700
+  font-size: 14px
+  line-height: 17px
+  color: #FFFFFF
+  border: 0
+  margin: 28px auto
+
+.edit_ads__center h6
+  margin-bottom: 0
+
+.input_foto_wrap
+  display: flex
+  position: relative
+  width: 100%
+  height: 114px
+  margin-bottom: 21px
+
+.input_foto_wrap input
+  margin-left: 12px
+
+.input_foto_wrap input::after
+  content: ""
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  opacity: 0
+
+.input_foto_img
+  width: 70px
+  height: 70px
+  background-color: red
+  position: relative
+  overflow: hidden
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-right: 6px
+
+.input_foto_img .img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: auto
+  height: 100%
+
+.input_foto_img .delete_img
+  width: 7.5px
+  height: 7.5px
+  position: absolute
+  top: 3px
+  right: 4px
+  border: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background: transparent
+
+.input_foto_div
+  width: 235px
+  height: 115px
+  position: relative
+  margin-left: 30px
+  background: #F6F7FE
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 8px
+
+.input_foto
+  width: 100%
+  height: 110px
+  position: absolute
+  top: 0
+  left: 0
+  cursor: pointer
+  z-index: 1
+  border-radius: 10px
+
+.input_foto h5
+  font-weight: 500
+  font-size: 11.6915px
+  line-height: 14px
+  height: 100%
+  color: $blue
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 4px
+  text-align: center
+  flex-direction: column
+
+.input_foto span
+  display: block
+  text-align: center
+  font-family: "Roboto", sans-serif
+  font-weight: 300
+  font-size: 12px
+  line-height: 14px
+  color: #858585
+
+.input_wrap
+  margin-bottom: 15px
+  position: relative
+  width: 49%
+
+.input_wrap .input, .input_wrap .open_date
+  width: 100%
+  height: 48px
+  background: #F6F7FE
+  font-family: "Roboto", sans-serif
+  @include p-15
+  color: #000
+  padding: 15px 16px
+  display: flex
+  align-items: center
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+
+.input_wrap .input::-webkit-input-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .input::-moz-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .input:-ms-input-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .input::-ms-input-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .input::placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .icon
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 20px
+  height: auto
+  display: flex
+
+.input_wraped
+  width: 100%
+
+.input_wrap .textarea, .input_wraped .textarea
+  width: 100%
+  height: 105px
+  max-height: 200px
+  background: #F6F7FE
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  padding: 15px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 15px
+  line-height: 18px
+  color: #414253
+  resize: none
+
+.input_wrap .textarea::-webkit-input-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .textarea::-moz-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .textarea:-ms-input-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .textarea::-ms-input-placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.input_wrap .textarea::placeholder
+  color: rgba(0, 0, 0, 0.4)
+
+.select_wrap
+  width: 230px
+
+.create_ads__right
+  display: none
+  width: 300px
+  min-height: 755px
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 30px 0
+  position: relative
+
+.create_ads__right .btn_save
+  position: absolute
+  max-width: 238px
+  width: 100%
+  height: 40px
+  left: 50%
+  bottom: 18px
+  transform: translateX(-50%)
+  background: #6FE1B8
+  border-radius: 10px
+  border: 0
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #FFFFFF
+
+.create_ads__right .title
+  font-weight: 800
+  font-size: 16px
+  line-height: 19px
+  color: #171A23
+  margin-bottom: 2px
+  padding: 0 20px
+
+.create_ads__right.open
+  display: block
+
+.cabinet__content_create
+  padding: 15px
+
+.btn_check
+  max-width: 255px
+  width: 100%
+  margin: 0 auto
+
+.btn_check .check
+  position: relative
+  margin-bottom: 10px
+
+.btn_check .check input
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.btn_check .check label
+  width: 100%
+  height: 40px
+  background: #F3F4F9
+  border-radius: 10px
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  color: #4088DD
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+
+.btn_check .check input:checked + label
+  background: #546EDB
+  color: #fff
+
+.textarea_max
+  max-width: 100%
+  width: 100%
+  min-width: 100%
+  height: 100px
+  min-height: 100px
+  max-height: 100px
+  background: #F6F8F9
+  border-radius: 5px
+  border: 0
+  padding: 23px 21px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #414253
+  margin-bottom: 20px
+
+.textarea_max::-webkit-input-placeholder
+  color: #414253
+
+.textarea_max::-moz-placeholder
+  color: #414253
+
+.textarea_max:-ms-input-placeholder
+  color: #414253
+
+.textarea_max::-ms-input-placeholder
+  color: #414253
+
+.textarea_max::placeholder
+  color: #414253
+
+.input_add_file
+  width: 100%
+  height: 60px
+  position: relative
+
+.input_add_file input
+  margin-left: 4px
+
+.input_add_file input::after
+  content: ""
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  cursor: pointer
+
+.input_add_file span
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  width: 100%
+  height: 100%
+  background: #F6F8F9
+  border-radius: 5px
+  padding: 0 32px 0 20px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #414253
+
+.select
+  display: block
+  max-width: 500px
+  width: 100%
+  position: relative
+
+.new-select
+  position: relative
+  background: #F6F8F9
+  border-radius: 5px
+  height: 60px
+  cursor: pointer
+  user-select: none
+  display: flex
+  align-items: center
+  padding: 20px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #414253
+  z-index: 1
+
+.new-select__list
+  position: absolute
+  top: 65px
+  left: 0
+  border: 1px solid #ced4da
+  cursor: pointer
+  width: 100%
+  z-index: 2
+  background: #fff
+  user-select: none
+
+.new-select__list.on
+  display: block
+
+.new-select__item span
+  display: block
+  padding: 10px 15px
+  text-align: start
+
+.new-select__item span:hover
+  background: #F6F8F9
+  color: #4088DD
+
+.new-select:after
+  content: ""
+  display: block
+  width: 15px
+  height: 10px
+  position: absolute
+  right: 25px
+  top: 26px
+  background: url("../assets/images/select-icon.svg") no-repeat right center/cover
+  opacity: 0.6
+  -webkit-transition: all 0.27s ease-in-out
+  transition: all 0.27s ease-in-out
+
+.new-select.on:after
+  transform: rotate(180deg)
+
+#calendar
+  width: 100%
+  line-height: 1.2em
+  font-size: 15px
+  text-align: center
+  border-spacing: 0px
+
+#calendar tr.dn td
+  font-size: 15px
+
+#calendar thead tr:last-child
+  font-size: small
+  color: #555555
+
+#calendar thead tr:nth-child(1) td:nth-child(2)
+  color: #323232
+
+#calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar thead tr:nth-child(1) td:nth-child(3):hover
+  cursor: pointer
+
+#calendar tbody td
+  color: #2c567a
+
+#calendar tbody td.today
+  background: #6FE1B8
+  color: #fff
+
+.look-calendar
+  width: 100%
+  padding: 6px
+  margin: 0 auto
+  padding: 0 10px
+  padding-top: 30px
+
+.look-calendar .top
+  font-weight: 400
+  font-size: 14px
+  line-height: 14px
+  color: #4A5660
+
+.look-calendar .dn
+  transform: translateY(26px)
+
+.look-calendar tbody
+  transform: translateY(58px)
+
+.look-calendar tbody td
+  font-weight: 600
+  font-size: 16px
+  line-height: 18px
+  color: #4A5660
+  height: 38px
+  border-radius: 50%
+
+.cabinet__content_switch
+  display: flex
+  width: 340px
+  height: 50px
+  background: #DAECFD
+  border-radius: 50px
+  margin-left: auto
+  overflow: hidden
+  padding: 5px 9px
+
+.cabinet__content_switch .btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 50%
+  height: 100%
+  font-family: "Roboto", sans-serif
+  font-weight: 500
+  font-size: 16px
+  line-height: 19px
+  color: #546EDB
+  border: 0
+  background-color: transparent
+
+.cabinet__content_switch .btn.active
+  color: #FFFFFF
+  background: #546EDB
+  border-radius: 50px
+
+.open-admin-menu, .cabinet__aside_close
+  display: none
+
+.cabinet_ads__item.active
+  background: #F4F9FF
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%)
+
+.imagesMultiple
+  display: flex
+  gap: 10px
+  div
+    position: relative
+    width: 110px
+    height: 115px
+  img
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    object-fit: cover
+  button
+    position: absolute
+    padding: 0
+    right: 2px
+    top: 0
+    border: none
+    outline: none
+    background-color: transparent
+.city__select
+  display: flex
+  gap: 20px
+  width: 100%
+  >div
+    width: 100%
+
+.back-arrow
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  gap: 10px
+  cursor: pointer
+  &-wrapper
+    align-items: center
+    display: flex
+    justify-content: center
+    width: 25px
+    height: 25px
+    background: $blue
+    border-radius: 4px
+  h6
+    margin-bottom: 0
+
+.form_cabinet_create
+  .nice-dates-day
+    font-weight: 600
+    font-size: 14px !important
+    line-height: 18px
+    letter-spacing: 1.25px
+    height: 41px !important
+  .nice-dates-day:not(.-disabled):hover:after
+    opacity: 0
+  .nice-dates-grid
+    height: 258px !important
+
+.nice-dates-day.-highlight
+  color: #fff
+  background: #546EDB
+.nice-dates-day.-highlight.start
+  border-radius: 40px 0 0 40px
+.nice-dates-day.-highlight.end
+  border-radius: 0 40px 40px 0
+.nice-dates-day.-highlight.start.end
+  border-radius: 40px
+
+.nice-dates-day_month
+  display: none
+
+.cabinet_ads__left.cabinet_ads__left_request
+  min-width: 830px
+  .cabinet_ads__item .radio_box
+    width: 430px
+
+.timing
+  h5
+    margin: 0
+
+.icon-mini
+  img
+    width: 20px
+    height: 20px
+
+.address_request
+  display: flex
+  svg
+    margin-right: 8px
+  span
+    font-family: 'Roboto'
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    color: #414253
+
+.request_left_side
+  display: flex
+  align-items: center
+
+.request_comment
+  margin-bottom: 4px
+  p
+    font-family: Roboto
+    font-size: 12px
+    line-height: 15px
+    color: #858585
+    margin-bottom: 0
+
+.request_total
+  display: flex
+  gap: 22px
+  color: #414253
+  margin-bottom: 7px
+  .request_total_title
+    font-family: 'Roboto'
+    font-weight: 400
+    font-size: 13px
+    line-height: 15px
+    padding: 4px 8px 5px 3px
+    color: #fff
+    background: #6FE1B8
+    border-radius: 100px
+    display: flex
+    align-items: center
+    width: fit-content
+    svg
+      margin-right: 4px
+    &.request_total_title_price
+      padding-right: 12px
+      background: $blue
+      font-weight: 700
+  .request__info
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 400
+    font-size: 13px
+    line-height: 125%
+    color: #000
+    margin-top: 5px
+  .request__info_price
+    font-weight: 700
+    color: $blue
+
+.timing_p, .timing_p__clicked
+  text-align: center
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 500
+  font-size: 17px
+  line-height: 20px
+  color: #546EDB
+  background: #6FE1B8
+  border-radius: 5px
+  padding: 16px 85px 16px 33px
+  position: relative
+  span
+    position: absolute
+    padding: 0 22px
+    background-color: #5CC7A0
+    border-radius: 5px
+    right: 0
+    top: 0
+    height: 100%
+    display: flex
+    align-items: center
+.request_top_cart_title
+  display: flex
+  align-items: center
+  margin-top: 22px
+  margin-bottom: 52px
+
+.timed_number
+  font-family: 'Roboto'
+  font-weight: 700
+  font-size: 14px
+  line-height: 16px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #6FE1B8
+  border-radius: 40px
+  color: #FFFFFF
+  padding: 4px 10px
+  margin-left: 22px
+
+.ads_item_request.cabinet_ads__item .title
+  margin-top: 0
+  font-weight: 600
+  font-size: 13px
+  line-height: 16px
+  margin-bottom: 3px
+
+.request_avatar
+  border-radius: 100%
+
+.open_settings
+  cursor: pointer
+  padding: 0 0 0 20px
+
+.open_settings_block
+  position: relative
+  display: flex
+  flex: 1
+  justify-content: flex-end
+  .open_settings__modal
+    position: absolute
+    right: 4px
+    bottom: -20px
+
+.open_settings__modal
+  background: #FFFFFF
+  min-width: 204px
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  padding: 16px 22px 0
+  .open_m_sett
+    cursor: pointer
+    text-align: right
+    line-height: 19px
+    margin-bottom: 12px
+    transition: all 0.4s
+    &:hover
+      color: #546EDB
+
+.cabinet_resp_wrap
+  display: flex
+
+.text-right
+  text-align: right
+  margin-bottom: 4px
+
+.info_calendar
+  margin-top: 24px
+
+.cabinet_response_rate
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin-left: 32px
+  padding: 30px 40px 26px 30px
+  min-width: 450px
+  .title
+    font-weight: 700
+    font-size: 12px
+    line-height: 14px
+    color: #858585
+    margin-bottom: 48px
+
+.rating
+  display: flex
+  width: 100%
+  justify-content: flex-end
+  overflow: hidden
+  flex-direction: row-reverse
+  position: relative
+  margin-bottom: 20px
+
+.rating-0
+  filter: grayscale(100%)
+
+.rating > input
+  display: none
+
+.rating > label
+  cursor: pointer
+  width: 40px
+  height: 40px
+  margin-top: auto
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='32' fill='none'%3E%3Cpath fill='%23FFA800' fill-opacity='.3' d='M26.425 31.85 17 26.055 7.575 31.85a1.007 1.007 0 0 1-1.114-.038.967.967 0 0 1-.38-1.028l2.696-10.6-8.42-7.015a.968.968 0 0 1-.308-1.053.994.994 0 0 1 .878-.674l10.991-.755L16.076.556c.305-.74 1.543-.74 1.848 0l4.158 10.133 10.99.754a.994.994 0 0 1 .88.675.968.968 0 0 1-.308 1.052l-8.421 7.016 2.696 10.599a.967.967 0 0 1-.38 1.028 1.01 1.01 0 0 1-1.114.038Z'/%3E%3C/svg%3E")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 76%
+  transition: .3s
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='32' fill='none'%3E%3Cpath fill='%23FFA800' d='M26.425 31.85 17 26.055 7.575 31.85a1.007 1.007 0 0 1-1.114-.038.967.967 0 0 1-.38-1.028l2.696-10.6-8.42-7.015a.968.968 0 0 1-.308-1.053.994.994 0 0 1 .878-.674l10.991-.755L16.076.556c.305-.74 1.543-.74 1.848 0l4.158 10.133 10.99.754a.994.994 0 0 1 .88.675.968.968 0 0 1-.308 1.052l-8.421 7.016 2.696 10.599a.967.967 0 0 1-.38 1.028 1.01 1.01 0 0 1-1.114.038Z'/%3E%3C/svg%3E")
+
+.rating > input:not(:checked) ~ label:hover,
+.rating > input:not(:checked) ~ label:hover ~ label
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='32' fill='none'%3E%3Cpath fill='%23FFA800' d='M26.425 31.85 17 26.055 7.575 31.85a1.007 1.007 0 0 1-1.114-.038.967.967 0 0 1-.38-1.028l2.696-10.6-8.42-7.015a.968.968 0 0 1-.308-1.053.994.994 0 0 1 .878-.674l10.991-.755L16.076.556c.305-.74 1.543-.74 1.848 0l4.158 10.133 10.99.754a.994.994 0 0 1 .88.675.968.968 0 0 1-.308 1.052l-8.421 7.016 2.696 10.599a.967.967 0 0 1-.38 1.028 1.01 1.01 0 0 1-1.114.038Z'/%3E%3C/svg%3E")
+
+.cabinet_response_rate_block
+  .textarea
+    width: 100%
+    max-width: 100%
+    height: 177px
+    background: #F4F9FF
+    border-radius: 10px
+    border: none
+    padding: 24px 19px
+    &::placeholder
+      font-weight: 400
+      font-size: 14px
+      line-height: 16px
+      color: #858585
+
+.cabinet_response_rate_block
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.response_btn
+  height: 100%
+  display: flex
+  align-items: flex-end
+  button
+    background: #6FE1B8
+    border-radius: 40px
+    border: none
+    width: 100%
+    height: 50px
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+    color: #fff
+
+.cabinet_responses__block
+  .top
+    img
+      border-radius: 100%
+
+.icon_response
+  img
+    width: 18px
+    height: 18px
+
+.status.notactive.busy
+  color: red !important
+  background: rgba(255, 3, 3, 0.3) !important
+  svg path
+    fill: red !important
+
+.h2_cabinet_main
+  @include h-28
+
+.cabinet__content
+  width: 100%
+
+.cabinet__aside
+  min-width: 280px
+
+.admin__main_cabinet__flex
+  display: flex
+  .right__cabinet__main_flex
+    max-width: 300px
+    border-left: 1px solid rgba(84, 110, 219, 0.2)
+    padding: 25px 24px 33px 22px
+
+.cabinet__wallet
+  padding: 17.68px 22px 20.67px 21.4px
+  color: $white
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='254' height='150' fill='none'%3E%3Crect width='254' height='150' fill='%235074DC' rx='14'/%3E%3Cmask id='a' width='254' height='150' x='0' y='0' maskUnits='userSpaceOnUse' style='mask-type:alpha'%3E%3Crect width='254' height='150' fill='%235075DC' rx='14'/%3E%3C/mask%3E%3Cg fill='%23fff' fill-opacity='.09' mask='url(%23a)'%3E%3Cg filter='url(%23b)'%3E%3Cpath d='m215.593 16.566-10.238-8.57a2.362 2.362 0 0 0-1.746-.542 2.395 2.395 0 0 0-1.609.872l-15.061 18.725 28.654-10.485Z'/%3E%3Cpath d='M174.289 35.082c-1.633.6-3.456-.257-4.05-1.902-.595-1.646.254-3.483 1.888-4.082l10.007-3.673 7.755-9.625-19.925 7.313c-4.395 1.612-6.88 6.185-6.057 10.695.027.262.025.534.122.803l16.491 45.634c1.785 4.938 7.253 7.506 12.153 5.708l50.482-18.525c3.266-1.199 4.965-4.873 3.776-8.164l-2.163-5.985-7.424 2.724c-7.364 2.703-15.547-1.14-18.229-8.562-2.682-7.421 1.132-15.667 8.497-18.37l7.424-2.724-2.163-5.985c-1.19-3.291-4.836-5.004-8.102-3.805l-50.482 18.525Zm45.35-23.42c-1.092-3.023-4.228-4.719-7.279-4.04l8.36 7.032-1.081-2.992Z'/%3E%3Cpath d='m240.37 29.474-11.136 4.086c-4.912 1.802-7.453 7.297-5.664 12.246 1.788 4.95 7.241 7.51 12.152 5.709l11.136-4.087a2.394 2.394 0 0 0 1.416-3.062l-4.866-13.465a2.366 2.366 0 0 0-3.038-1.427Zm-6.811 16.056a3.154 3.154 0 0 1-4.05-1.903c-.597-1.652.249-3.48 1.888-4.082a3.155 3.155 0 0 1 4.051 1.902c.597 1.652-.249 3.481-1.889 4.083Z'/%3E%3C/g%3E%3Cg filter='url(%23c)'%3E%3Cpath d='m200.552 96.725-5.063-4.335a1.15 1.15 0 0 0-.863-.275 1.18 1.18 0 0 0-.796.442l-7.448 9.472 14.17-5.304Z'/%3E%3Cpath d='M180.127 106.092c-.808.303-1.709-.13-2.003-.963-.294-.832.126-1.761.934-2.065l4.948-1.857 3.835-4.87-9.853 3.7c-2.173.816-3.402 3.129-2.995 5.411.013.132.012.269.06.406l8.155 23.085c.883 2.498 3.587 3.797 6.01 2.888l24.963-9.372c1.616-.606 2.456-2.465 1.868-4.13l-1.07-3.028-3.671 1.378c-3.642 1.368-7.688-.577-9.014-4.331-1.326-3.754.56-7.926 4.201-9.293l3.671-1.378-1.069-3.028c-.588-1.665-2.391-2.531-4.006-1.925l-24.964 9.372Zm22.426-11.848c-.54-1.529-2.091-2.387-3.6-2.044l4.134 3.558-.534-1.514Z'/%3E%3Cpath d='m212.804 103.255-5.507 2.067c-2.428.912-3.685 3.691-2.801 6.195.885 2.504 3.581 3.8 6.01 2.888l5.507-2.068c.608-.228.921-.922.7-1.548l-2.406-6.813c-.222-.626-.895-.95-1.503-.721Zm-3.368 8.122c-.81.304-1.708-.127-2.003-.962-.295-.836.123-1.761.934-2.066.811-.304 1.708.127 2.003.963.295.836-.123 1.761-.934 2.065Z'/%3E%3C/g%3E%3Cpath d='m237.9 88.066-2.7-2.32a.615.615 0 0 0-.461-.146.625.625 0 0 0-.424.236l-3.972 5.067 7.557-2.837Z'/%3E%3Cpath d='M227.006 93.076a.829.829 0 0 1-1.068-.515.872.872 0 0 1 .498-1.105l2.639-.993 2.046-2.605-5.255 1.979c-1.159.436-1.815 1.674-1.598 2.894.008.07.007.144.032.217l4.35 12.348c.47 1.336 1.913 2.032 3.205 1.545l13.314-5.013c.861-.324 1.309-1.318.996-2.209l-.571-1.62-1.958.738c-1.942.731-4.1-.309-4.807-2.317-.708-2.008.298-4.24 2.241-4.97l1.957-.738-.57-1.62c-.314-.89-1.275-1.353-2.137-1.029l-13.314 5.013Zm11.961-6.337c-.288-.818-1.115-1.277-1.92-1.094l2.205 1.903-.285-.81Z'/%3E%3Cpath d='m244.434 91.558-2.937 1.106c-1.295.488-1.965 1.974-1.494 3.314.472 1.339 1.91 2.032 3.206 1.544l2.936-1.106a.653.653 0 0 0 .374-.828l-1.283-3.644a.621.621 0 0 0-.802-.386Zm-1.796 4.345a.826.826 0 0 1-1.068-.515.87.87 0 0 1 .498-1.105.826.826 0 0 1 1.068.515.87.87 0 0 1-.498 1.105Z'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='b' width='92.11' height='86.528' x='160.029' y='3.722' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_406_2' stdDeviation='1.861'/%3E%3C/filter%3E%3Cfilter id='c' width='45.59' height='43.729' x='173.055' y='90.249' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_406_2' stdDeviation='.93'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E")
+  .cabinet_wallet_title
+    @include h-23
+    margin-bottom: 6px
+  .cabinet_wallet__summary
+    @include h-23
+    .cabinet_wallet__points
+      @include p-14-500
+  .cabinet_wallet_add
+    border: none
+    background: $white
+    box-shadow: 5.58242px 6.51282px 12.0952px #3F59C7, -7.44322px -5.58242px 10.2344px rgba(255, 255, 255, 0.25)
+    border-radius: 46.5201px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 128.4px
+    height: 37.22px
+    color: $blue
+    font-weight: 600
+    font-size: 16.7473px
+    line-height: 21px
+    margin-top: 12px
+
+.cabinet__right___block
+  min-width: 254px
+
+.cabinet__points
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='254' height='150' fill='none'%3E%3Crect width='254' height='150' fill='%2347BD93' rx='14'/%3E%3Cmask id='a' width='254' height='150' x='0' y='0' maskUnits='userSpaceOnUse' style='mask-type:alpha'%3E%3Crect width='254' height='150' fill='%236FE1B8' rx='14'/%3E%3C/mask%3E%3Cg fill='%23fff' fill-opacity='.09' mask='url(%23a)'%3E%3Cpath d='m248.007 88.368-2.556.967 1.164 3.08 2.557-.966a1.649 1.649 0 0 0 .958-2.123 1.65 1.65 0 0 0-2.123-.958Z'/%3E%3Cpath d='M253.382 81.158c-6.559-2.96-14.264-.049-17.224 6.511-2.961 6.56-.049 14.264 6.512 17.225 6.559 2.96 14.263.048 17.224-6.512 2.96-6.56.048-14.264-6.512-17.224Zm-3.454 12.292-2.556.966.396 1.048 2.048-.774a1.07 1.07 0 0 1 .757 2l-2.049.775.391 1.032a1.07 1.07 0 0 1-2.001.757l-.39-1.032-1.033.39a1.07 1.07 0 1 1-.756-2.001l1.032-.39-.396-1.048-1.032.39a1.07 1.07 0 0 1-.757-2l1.032-.391-1.542-4.081a1.069 1.069 0 0 1 .622-1.379l3.557-1.344a3.79 3.79 0 0 1 4.879 2.202 3.789 3.789 0 0 1-2.202 4.88Z'/%3E%3Cg filter='url(%23b)'%3E%3Cpath d='m240.904 132.748-4.108 1.588 1.871 5.061 4.109-1.588c1.365-.528 2.056-2.092 1.54-3.487s-2.047-2.101-3.412-1.574Z'/%3E%3Cpath d='M249.542 120.902c-10.541-4.863-22.924-.079-27.682 10.698-4.757 10.776-.077 23.433 10.466 28.297 10.541 4.863 22.924.079 27.682-10.698 4.757-10.776.077-23.434-10.466-28.297Zm-5.55 20.194-4.109 1.588.637 1.722 3.292-1.273a1.709 1.709 0 0 1 2.216 1.022c.335.908-.112 1.922-1 2.265l-3.292 1.273.627 1.695c.335.908-.112 1.922-1 2.265a1.708 1.708 0 0 1-2.216-1.022l-.627-1.696-1.659.641a1.706 1.706 0 0 1-2.215-1.022c-.336-.907.112-1.921 1-2.265l1.658-.641-.637-1.721-1.658.641c-.888.343-1.88-.115-2.216-1.023-.336-.907.112-1.921 1-2.264l1.659-.641-2.48-6.705c-.336-.908.112-1.922 1-2.265l5.717-2.209c3.138-1.213 6.656.41 7.842 3.618 1.187 3.208-.401 6.804-3.539 8.017Z'/%3E%3C/g%3E%3Cg filter='url(%23c)'%3E%3Cpath d='m235.815 6.337-6.484 2.45 2.954 7.813 6.484-2.45a4.18 4.18 0 0 0 2.429-5.384 4.18 4.18 0 0 0-5.383-2.43Z'/%3E%3Cpath d='M249.446-11.95c-16.635-7.508-36.174-.123-43.682 16.514-7.508 16.635-.123 36.174 16.515 43.682 16.634 7.508 36.174.122 43.682-16.515 7.507-16.634.122-36.174-16.515-43.682Zm-8.759 31.173-6.483 2.452 1.004 2.657 5.195-1.964a2.713 2.713 0 0 1 1.919 5.075l-5.195 1.964.99 2.617a2.713 2.713 0 0 1-5.075 1.919l-.989-2.618-2.618.99a2.712 2.712 0 1 1-1.918-5.074l2.617-.99-1.005-2.658-2.617.99a2.712 2.712 0 1 1-1.919-5.075l2.618-.99-3.913-10.349a2.712 2.712 0 0 1 1.578-3.496l9.021-3.41c4.952-1.873 10.503.633 12.375 5.584 1.873 4.952-.633 10.504-5.585 12.376Z'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='b' width='45.59' height='46.52' x='218.139' y='117.139' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_407_3' stdDeviation='.93'/%3E%3C/filter%3E%3Cfilter id='c' width='69.79' height='69.79' x='200.967' y='-16.747' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_407_3' stdDeviation='.93'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E")
+  color: $white
+  padding: 17px 24px 11px 21px
+  margin: 20px 0
+  .cabinet__points_title
+    @include h-23
+    margin-bottom: 8px
+  input
+    background: linear-gradient(90.69deg, rgba(11, 11, 11, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%)
+    border-radius: 4px
+    width: 100%
+    border: none
+    color: $white
+    @include p-11
+    padding: 5.58px 7.44px 4.65px 6.51px
+  .points_promo
+    display: flex
+    align-items: center
+    margin-top: 8px
+    margin-bottom: 10px
+    border-radius: 4px 0 0 4px
+    background: linear-gradient(90.69deg, rgba(11, 11, 11, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%)
+    @include p-11
+    .promo_points_title
+      padding: 5px 5px 4px 7px
+  .input_points_2
+    border-radius: 0 4px 4px 0
+    padding-left: 10px
+  .points_sub__text
+    @include p-7
+    margin-bottom: 4px
+
+.accordion_cabinet
+  .MuiPaper-root
+    box-shadow: none
+  .MuiAccordionSummary-root
+    padding: 0
+    min-height: 22px
+  .typography_title
+    @include p-18
+    font-family: Gilroy
+  .Mui-expanded
+    margin: 0
+  .MuiAccordionSummary-content
+    margin: 0
+
+.tabs_list
+  overflow: visible !important
+  .MuiTabs-indicator
+    background: transparent
+    z-index: 4
+    margin: 0 1px
+    bottom: -1px
+    span
+      background: $white
+      left: 0
+      right: 0
+      position: absolute
+      height: 2px
+      width: 99%
+  .MuiTabs-scroller
+    overflow: visible !important
+  .tab_navigate
+    border: 1px solid rgba(84, 110, 219, 0.2)
+    border-radius: 14px 14px 0 0
+    border-bottom: none
+    @include p-16-500
+    font-family: Gilroy
+    color: $blue
+    text-transform: inherit
+    background: $white
+    width: 112px
+    z-index: 1
+    padding: 0
+    &:nth-child(2)
+      width: 128px
+      margin-left: -15px
+    .face_div_title
+      color: #546EDB
+      opacity: 0.7
+      background: rgba(84, 110, 219, 0.2)
+      border-radius: 50px
+      padding: 6px 13px 7px 13px
+    &.Mui-selected
+      z-index: 2
+      .face_div_title
+        background: $blue
+        opacity: 1
+        color: $white
+
+.tab_panels
+  .MuiTabPanel-root
+    padding: 12px 11px 12px 10px
+
+.tab_panels
+  border: 0.96px solid rgba(84, 110, 219, 0.2)
+  border-radius: 0 14px 14px 14px
+
+.add_photo_face
+  margin-top: 8px
+
+.tab_photo_flex
+  display: flex
+  justify-content: space-between
+  cursor: pointer
+
+.tab_photo
+  position: relative
+  img
+    width: 110px
+    height: 115px
+    object-fit: cover
+    border-radius: 8px
+  .tab_photo_delete
+    position: absolute
+    width: 23px
+    height: 23px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $blue
+    top: 5px
+    right: 2px
+    border-radius: 100%
+    cursor: pointer
+
+.text_photo__pass
+  @include p-12
+  font-weight: 500
+  margin-top: 8px
+  margin-bottom: 8px
+  span
+    color: #FF0000
+
+.btn_custom
+  width: 100%
+  height: 47px
+  display: flex
+  justify-content: center
+  align-items: center
+  border: none
+  background: $blue
+  color: $white
+  border-radius: 8px
+  font-weight: 700
+
+.admin__info_top-wrapper
+  justify-content: normal !important
+  padding: 24px 46px 22px 24px
+  align-items: center
+
+.info_top_second_flex
+  display: flex
+  align-items: center
+  @include p-14-600
+  .info_adv
+    color: $blue
+    margin-bottom: 3px
+  .info_response
+    color: $salad
+  .input_name
+    input
+      min-width: 250px
+      height: 55px
+      background: $purple-light
+      border-radius: 10px
+
+.info_formation
+  margin-left: 20px
+
+.info_top_second__text
+  @include p-16-500
+  margin-bottom: 10px
+  span
+    @include p-16-400
+
+.info_contacts
+  padding: 24px 33px 24px 24px
+  border-top: 1px solid #DDE2F8
+  border-radius: 8px
+
+.cabinet__content
+  .typography_title_strong
+    @include h-25
+    font-family: Gilroy
+
+.cabinet__content
+  .switch
+    position: relative
+    display: inline-block
+    width: 40px
+    height: 21px
+  .switch input
+    opacity: 0
+    width: 0
+    height: 0
+  .slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #727272
+    -webkit-transition: .4s
+    transition: .4s
+  .slider:before
+    position: absolute
+    content: ""
+    height: 17px
+    width: 17px
+    left: 2px
+    bottom: 2px
+    background-color: $white
+    transition: .4s
+  input:checked + .slider
+    background-color: $checkbox-green
+  input:focus + .slider
+    box-shadow: 0 0 1px $checkbox-green
+  input:checked + .slider:before
+    transform: translateX(19px)
+  .slider.round
+    border-radius: 34px
+  .slider.round:before
+    border-radius: 50%
+
+.info_soc_block
+  width: 90px
+  height: 48px
+  background: #F6F7FE
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  display: flex
+  align-items: center
+  padding-left: 8px
+  img
+    margin-right: 8px
+
+.info__block_title
+  @include p-14-600
+  margin-bottom: 8px
+
+.info_soc_flex
+  display: flex
+  justify-content: space-between
+  gap: 10px
+
+.left__cabinet__main_flex
+  flex-basis: 100%
+
+.info_contacts_top
+  margin-top: 16px
+  display: flex
+  gap: 30px
+
+.info_contacts_tel
+  .input2
+    width: 210px
+    height: 48px
+    p
+      background: $purple-light
+      @include p-14-400
+      font-family: Gilroy
+      padding: 0 15px
+      img
+        margin-right: 14px
+
+.info_contacts_bottom
+  .input_email
+    max-width: 325px
+
+.iconLeft
+  position: absolute
+  top: 13px
+  left: 15px
+
+.info_whenBlock
+  padding: 24px 35px 30px 24px
+  border-top: 1px solid #DDE2F8
+  border-radius: 8px 8px 0 14px
+
+.info_soc_toggle
+  @include p-16-400
+  p
+    margin-left: 13px
+
+.info_when__flex
+  margin-top: 18px
+  .info_top
+    display: flex
+    gap: 30px
+    margin-bottom: 14px
+
+.info_soc_block
+  &.switchApplication
+    width: 204px
+    background: $salad
+    @include p-14-400
+    color: $blue
+    input:checked + .slider
+      background: $blue
+  &.switchWork
+    width: 150px
+
+.info_block__time
+  background: $purple-light
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  width: 110px
+  height: 48px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-left: 36px
+  span
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    background: $blue
+    color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    width: 41px
+
+.info_bottom___left
+  display: flex
+  gap: 14px
+
+.info_bottom___right
+  @include p-10
+  font-weight: 500
+  color: #000000
+  max-width: 270px
+  span
+    color: #ff0000
+
+.info_bottom___flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.advers___title
+  @include p-14-500
+  margin-bottom: 8px
+
+.ads__top_block
+  padding: 22px 22px 22px 23px
+
+.ads__filters__block
+  padding: 20px 23px 23px 23px
+  border-top: 1px solid #DDE2F8
+  border-radius: 8px
+
+.advers_top_flex_left
+  display: flex
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  padding: 3px
+  gap: 8px
+
+.advers__flex_top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 50px
+  .advers_filter_block
+    padding: 13px 15px 12px 15px
+    @include p-14-400
+    color: rgba(0, 0, 0, 0.5)
+    cursor: pointer
+    &.active
+      background: #F6F7FE
+      border-radius: 10px
+      color: $blue
+      font-weight: 500
+
+.advers__flex__bottom
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-top: 15px
+
+.flex_advers__settings
+  display: flex
+  padding: 3px 3px 3px 6px
+  gap: 8px
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+
+.advers__settings
+  cursor: pointer
+  padding: 13px 13px 12px 14px
+  border-radius: 10px
+  color: $blue
+  @include p-14-500
+  &.advers__settings_stop
+    background: #6FE1B8
+  &.advers__settings_changeDate
+    background: #F6F7FE
+  &.advers__settings_delete
+    background: rgba(211, 33, 33, 0.05)
+    color: #D32121
+
+.container_checkbox
+  display: block
+  position: relative
+  padding-left: 23px
+  margin-top: 10px
+  cursor: pointer
+  font-size: 22px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.container_checkbox input
+  position: absolute
+  opacity: 0
+  cursor: pointer
+  height: 0
+  width: 0
+
+.checkmark
+  position: absolute
+  top: 0
+  left: 0
+  height: 22px
+  width: 22px
+  background: #E6E9FF
+  border-radius: 4px
+
+.container_checkbox:hover input ~ .checkmark
+  background: #E6E9FF
+
+.container_checkbox input:checked ~ .checkmark
+  background-color: $blue
+
+.checkmark:after
+  content: ""
+  position: absolute
+  display: none
+
+.container_checkbox input:checked ~ .checkmark:after
+  display: block
+
+.container_checkbox .checkmark:after
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' fill='none'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M12.475.2c.553.353.691 1.054.308 1.565l-7.306 9.75a1.249 1.249 0 0 1-.98.485 1.257 1.257 0 0 1-1-.452L.243 7.526C-.16 7.028-.05 6.323.49 5.952c.54-.372 1.303-.27 1.706.227l2.241 2.77L10.78.484c.383-.51 1.142-.639 1.696-.285Z' clip-rule='evenodd'/%3E%3C/svg%3E")
+  left: 5px
+  top: -3px
+
+.flex__advers__sorter
+  background: #F6F7FE
+  border-radius: 10px
+  padding: 14px 9px 14px 11px
+  @include p-14-400
+  color: rgba(0, 0, 0, 0.5)
+  cursor: pointer
+  svg
+    margin-left: 7px
+
+.cabinet_ads__item .options
+  display: none
+
+.scroll_if_needed
+  padding: 25px 23px 35px 23px
+  border-radius: 8px
+
+.advers__about
+  font-family: 'Roboto'
+  font-weight: 400
+  font-size: 10px
+  line-height: 125%
+  color: #858585
+  max-width: 200px
+  width: 200px
+
+.advers__medium__flex
+  display: flex
+  align-items: flex-start
+
+.advers__box___right
+  padding: 20px 19px 19px 19px
+  border-left: 2px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  .link
+    cursor: pointer
+  .redact
+    width: 187px
+    height: 45px
+    background: $blue
+    border-radius: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    @include p-16-500
+    color: $white
+
+.advers__right_sub__buttons
+  margin-top: 12px
+  display: flex
+  gap: 10px
+  .other_actions
+    @include p-10
+    color: #858585
+
+.advers_prices
+  display: flex
+  align-items: center
+  margin-left: 14px
+  gap: 28px
+  .advs_price
+    color: $blue
+    &.price_sm
+      color: #4088DD
+    h5
+      margin-bottom: 0
+      font-size: 16px
+      font-weight: 700
+      line-height: 20px
+    span
+      font-family: Roboto
+      @include p-10
+      display: block
+      margin-top: -3px
+
+.adver_bottom_info
+  display: flex
+  gap: 30px
+  margin-top: 14px
+  .advers_bottom_info___block
+    font-family: Roboto
+    display: flex
+    align-items: center
+    @include p-10
+    color: #858585
+    span
+      color: #6FE1B8
+      margin-left: 3px
+    svg
+      margin-right: 4px
+
+.create_ads
+  background: #fff
+  border: 1px solid #DDE2F8
+  border-radius: 14px
+  margin-top: 14px
+
+.advers__add_top
+  padding: 22px 22px 22px 23px
+
+.create__ads_block
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.create_ads__box
+  .input_foto
+    position: relative
+    z-index: inherit
+    display: block
+    height: 100%
+    display: flex
+    justify-content: center
+
+.input_wrap_100
+  width: 100%
+
+.db
+  display: block
+
+.input_photo_text
+  max-width: 141px
+  font-weight: 500
+  font-size: 12px
+  line-height: 15px
+  span
+    color: #FF0000
+
+.mt14
+  margin-top: 14px
+
+.input_foto_div.true
+  width: 110px
+  background: #FFFFFF
+  border: 1px solid #546EDB
+
+.input_wrap_toggle
+  background: #F6F7FE
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  display: flex
+  align-items: center
+
+.info_soc_advs
+  background: #FFFFFF
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  margin: -1px
+  width: 77px
+  padding-left: 16px
+
+.input_wrap_toggle
+  max-width: 283px
+  .span_soc_text
+    font-family: Roboto
+    font-weight: 400
+    font-size: 15px
+    line-height: 18px
+    color: #000
+    margin-left: 16px
+
+.create_ads_border
+  border-top: 1px solid #DDE2F8
+  border-radius: 8px
+  padding: 15px 23px 17px 23px
+
+.input_foto
+  svg
+    margin-bottom: 6px
+
+.create__ads_block.create__ads_b_block
+  justify-content: flex-start
+  gap: 0 10px
+
+.inp_wrap_price
+  span
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    min-width: 77px
+    padding: 0 4px
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $blue
+    border-radius: 10px
+    @include p-14-500
+    color: $white
+  .input
+    padding-left: 90px
+
+.input_wrap .open_date
+  font-family: Roboto
+  font-weight: 400
+  font-size: 15px
+  color: rgba(0, 0, 0, 0.4)
+  padding-left: 90px
+
+.icon_date
+  position: absolute
+  left: 0
+  bottom: 0
+  top: 0
+  width: 77px
+  border-radius: 10px
+  background: #6FE1B8
+  display: flex
+  justify-content: center
+  align-items: center
+
+.create_ads_t_block.create_ads_border.create_ads_border_none
+  border-top: none
+
+.request_block
+  padding: 22px 21px
+
+.scroll_if_needed_request
+  border: 1px solid #DDE2F8
+  border-radius: 8px
+  width: 50%
+  padding: 17px 21px 23px 22px
+  padding-right: 0
+  .ads_item_request
+    img
+      width: 125px
+      transform: inherit
+      position: relative
+      top: 0
+      left: 0
+      border-radius: 6px
+
+.request__flex
+  display: flex
+  min-height: 500px
+  position: relative
+  .radio_box
+    display: block
+    width: inherit
+    margin-bottom: 0
+  .title
+    font-weight: 600
+    font-size: 13px
+    line-height: 16px
+    margin-bottom: 3px
+  .cabinet_ads__item
+    border: 1px solid #6FE1B8
+    border-radius: 6px
+    height: 62px
+    cursor: pointer
+    &.empty
+      opacity: 0.5
+      border: 1px solid rgba(84, 110, 219, 0.2)
+      .request_top_cart_right
+        border: 1px solid rgba(84, 110, 219, 0.2)
+        background: rgba(84, 110, 219, 0.2)
+      path
+        fill: #BBB9B9
+      .timed_number
+        background: none
+        color: #BBB9B9
+
+  .cabinet_ads__item .img
+    width: 100%
+    max-width: 125px
+    margin-right: 14px
+  .radio_request__flex
+    display: flex
+  .radio
+    @include p-16-600
+    color: #858585
+    width: 45%
+  span
+    font-family: Roboto
+    font-weight: 400
+    font-size: 10px
+    line-height: 125%
+    color: #858585
+  .cabinet_ads__date
+    .request_top_right
+      margin-left: auto
+    .block
+      margin: 0 21px 20px 21px
+      padding: 14px 11px 16px 12px
+      box-shadow: none
+      border-radius: 6px
+      border: 1px solid #6FE1B8
+      .top
+        .request_id_number
+          color: #000000
+          font-family: Roboto
+          font-weight: 300
+          font-size: 14px
+          line-height: 16px
+        .img
+          width: 62px
+          height: 62px
+          border-radius: 100%
+          margin-right: -2px
+      .grade
+        display: flex
+        gap: 3px
+        align-items: center
+        margin-top: 0
+        svg
+          margin-right: 0
+        .grade_text
+          font-family: Roboto
+          font-weight: 300
+          font-size: 14px
+        .grade_mark
+          font-family: "Roboto"
+          @include p-14-600
+          color: #FFA800
+
+.cabinet_ads__date
+  width: 50%
+
+.radio_box
+  margin-top: 8px
+  .radio
+    h5
+      margin-bottom: -8px
+
+.request_top_cart_right
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #6FE1B8
+  border-radius: 6px
+  min-width: 51px
+  .timed_number
+    margin-left: 0
+    color: #546EDB
+
+.request__flex
+  .cabinet_ads__date
+    width: 50%
+  .wrap
+    border: 1px solid #DDE2F8
+    border-radius: 8px
+
+.request_avatar
+  width: 62px
+  height: 62px
+  object-fit: cover
+
+.request_tabs_wrap
+  padding: 11px 20px 0 21px
+  .request_tabs
+    display: flex
+    gap: 11px
+    margin-bottom: 11px
+  .request_tab
+    position: relative
+    padding: 7px 10px 6px 12px
+    background: #DDE2F8
+    border-radius: 50px
+    @include p-14-500
+    color: #7E91E4
+    cursor: pointer
+    span
+      position: absolute
+      right: -21px
+      top: 0px
+      background: #D32121
+      width: 28px
+      height: 28px
+      border-radius: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: 600
+      font-size: 13px
+      line-height: 16px
+      text-align: center
+      color: #FFFFFF
+    &.active
+      color: $white
+      background: $blue
+
+.request_top_right
+  @include p-10
+  font-weight: 300
+  line-height: 195%
+  color: #727070
+  text-align: right
+
+.address_request_cart
+  margin-bottom: 17px
+  font-family: Roboto
+  font-size: 13px
+  line-height: 125%
+  color: #858585
+  svg
+    margin-right: 6px
+
+.admin__info_btns-wrapper
+  justify-content: center
+  margin-bottom: 20px
+
+.request__flex
+  .cabinet_ads__date .timing
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .btn
+      font-family: Gilroy
+      width: 48.5%
+      background: $blue
+      border-radius: 5px
+      font-weight: 700
+      font-size: 15px
+      line-height: 19px
+      color: #fff
+      position: relative
+      padding-right: 66px
+      span
+        position: absolute
+        width: 62px
+        right: 0
+        top: 0
+        bottom: 0
+        color: #fff
+        font-weight: 400
+        font-size: 15px
+        line-height: 18px
+        background: #4059C1
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+    .request_refuse__btn
+      width: 48.5%
+      background: #FDF4F4
+      border-radius: 5px
+      height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-weight: 500
+      font-size: 15px
+      line-height: 18px
+      color: #D32121
+      cursor: pointer
+
+// SMALL_
+@media(max-width: 1500px)
+  .create_ads__center
+    margin-right: 0
+
+  .create_ads__box
+    >div
+      width: 100%
+  .input_wrap
+    width: 100%
+
+@media(max-width: 1024px)
+  .cabinet__box
+    padding: 10px 0 40px
+  .cabinet .admin__info_btns-wrapper
+    justify-content: center
+    button
+      font-size: 13px
+  .cabinet__redesign_container
+    .cabinet__redesign_title
+      @include h-20
+  .cabinet__content
+    width: 100%
+    height: 100%
+    min-height: unset
+    padding: 0
+
+  .cabinet__aside
+    position: absolute
+    width: 100vw
+    z-index: 1000
+    height: 100vh
+    top: 0
+    left: 0
+
+.track-vertical
+  background: #000
+
+@media(max-width: 768px)
+  .cabinet_ads__item .options
+    display: block
+  .timing_p__clicked
+    width: 100%
+
+@import "redisignMedia.sass"

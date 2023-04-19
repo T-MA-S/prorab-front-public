@@ -1,0 +1,136 @@
+@import "../../styles/variables"
+
+.support
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background: $white
+    border: 1px solid $light-blue
+    border-radius: 14px
+    position: relative
+
+    .message
+        width: 49%
+        border-radius: 6px
+        padding: 15px
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        &__text
+            margin-bottom: 10px
+            text-align: left
+            @include p-16-400
+
+        &__bottom
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .date
+                font-size: 14px
+                margin-right: 8px
+            span
+                color: #777C85
+                @include p-12
+        img
+            width: 100%
+            border-radius: inherit
+
+    .from_user
+        margin-left: auto
+        text-align: right
+        background: #DBEBFF
+
+    .from_support
+        margin-right: auto
+        background: #F6F7FE
+
+    .photos
+        display: flex
+        gap: 10px
+        img
+            width: 90px
+            height: 90px
+            border-radius: 10px
+            object-fit: cover
+
+.header
+    padding: 20px
+    display: flex
+    gap: 15px
+    p, span
+        @include h-20
+    span
+        font-weight: 700
+
+.dialog
+    padding: 20px
+
+.FAQNavigation
+    padding: 20px 30px
+    background: $blue
+    border-radius: 8px
+    color: $white
+    &__text
+        margin-bottom: 10px
+        @include  p-18
+
+    &__tabs_wrapper
+        display: flex
+        flex-wrap: wrap
+        gap: 15px
+    .tab
+        padding: 10px 23px
+        background-color: rgba(255, 255, 255, 0.2)
+        border: 1px solid rgba(111, 225, 184, 0.3)
+        border-radius: 50px
+        cursor: pointer
+        color: inherit
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out
+        @include p-12
+
+        &:hover
+            background-color: rgba(255, 255, 255, 0.4)
+
+.messageField
+    padding: 20px
+    background: #FFFFFF
+    border-top: 1px solid #DDE2F8
+    border-radius: 8px
+
+.message__date
+    @include p-16-400
+    color: #121E52
+    text-align: center
+    margin-bottom: 25px
+
+@media (max-width: 1024px)
+    .support
+        min-height: 200px
+
+        .from_user,
+        .from_support
+            width: 90%
+
+        .date
+            text-align: center
+
+        .message__text
+            @include p-14-500
+
+    .header
+        padding: 10px 14px
+        gap: 10px
+        align-items: center
+    .FAQNavigation
+        padding: 10px 15px
+        .tap
+            padding: 10px 15px
+        &__text
+            @include p-14-500
+        &__tabs_wrapper
+            gap: 10px
+
+    .dialog
+        padding: 10px
+        max-height: 300px

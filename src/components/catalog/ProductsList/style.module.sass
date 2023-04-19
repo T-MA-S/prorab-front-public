@@ -1,0 +1,142 @@
+.catalog_wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+.card
+    background: #FFFFFF
+    position: relative
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    border: 1px solid rgba(84, 110, 219, 0.15)
+    border-radius: 8px
+    .share
+        position: absolute
+        top: 10px
+        left: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+    &__rating
+        width: 52px
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 5px
+        gap: 3px
+        position: absolute
+        right: 0
+        font-weight: 600
+        font-size: 12px
+        line-height: 14px
+        color: #FFA800
+        background: rgba(255, 255, 255, 0.9)
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15)
+        border-radius: 0 5px 0 10px
+        span
+            color: #B0A9A9
+
+    &__like
+        width: 22px
+        height: 22px
+        background: rgba(255, 255, 255, 0.9)
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15)
+        border: none
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 28px
+        right: 5px
+        z-index: 1
+        &.active path
+            fill: #E21111
+
+.character
+    margin-bottom: 5px
+    font-weight: 700
+    font-size: 13px
+    line-height: 15px
+    color: #414253
+
+.descr
+    height: 45px
+    overflow: hidden
+    margin-bottom: 17px
+    font-size: 10px
+    color: #858585
+
+.btn
+    padding: 16px
+    text-align: center
+    background: #546EDB
+    border-radius: 5px
+    color: #fff
+    font-weight: 700
+    font-size: 15px
+    line-height: 19px
+    width: 100%
+    display: block
+
+.img_wrapper
+    display: flex
+    border-radius: 8px
+    max-height: 160px
+    img
+        width: 100%
+        object-fit: cover
+        border-radius: 8px
+
+.content
+    padding: 12px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+
+.title_box
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 12px
+
+.title
+    margin: 0
+    color: #414253
+    font-weight: 700
+    font-size: 14px
+    line-height: 17px
+
+.status
+    padding: 4px 8px 4px 20px
+    border-radius: 40px
+    font-weight: 500
+    font-size: 11px
+    line-height: 13px
+    color: #FFFFFF
+    background: url('../../../assets/images/clock.svg') no-repeat left 5px center
+
+    &.busy
+        background-color: #E21111
+
+    &.soon
+        background-color: #FF9F00
+
+    &.free
+        background-color: #6FE1B8
+
+@media screen and (max-width: 1200px)
+    .catalog_wrapper
+        grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 576px)
+    .catalog_wrapper
+        grid-template-columns: repeat(1, 1fr)
+        gap: 25px
+        .img_wrapper
+            img
+                max-height: 165px

@@ -1,0 +1,996 @@
+
+.modal__overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 50
+  background: rgba(0, 0, 0, 0.6)
+
+.modal__overlay.active
+  display: block
+
+.modal__close
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.modal__feedback
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  max-width: 425px
+  padding: 25px
+  max-height: 100%
+  position: relative
+  z-index: 100
+  left: 50%
+  top: 50%
+  border-radius: 7px
+  transform: translate(-50%, -50%)
+  background: #FFFFFF
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+.modal
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 1025px
+  max-width: 100%
+  padding: 53px
+  max-height: 100%
+  position: relative
+  z-index: 100
+  left: 50%
+  top: 50%
+  border-radius: 30px
+  transform: translate(-50%, -50%)
+  background: #FFFFFF
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+.modal #open-calendar
+  cursor: pointer
+
+.modal .calendar
+  display: none
+  width: 510px
+  height: 360px
+  background: #F6F8F9
+  border-radius: 8px
+  position: absolute
+  top: 146px
+  right: 64px
+
+.modal .calendar.open
+  display: block
+
+.modal .phone
+  max-width: 353px
+  width: 100%
+  font-weight: 400
+  font-size: 22px
+  line-height: 26px
+  color: #171A23
+  margin-bottom: 20px
+
+.modal .text
+  max-width: 353px
+  width: 100%
+  font-weight: 400
+  font-size: 22px
+  line-height: 26px
+  color: #171A23
+  margin-bottom: 30px
+
+.modal .soc
+  display: flex
+  margin-bottom: 65px
+
+.modal .soc .item
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 31px
+  height: 31px
+  margin-right: 15px
+
+.modal .soc .item img
+  width: 100%
+
+.modal .input_copy
+  width: 330px
+  height: 40px
+  position: relative
+  margin-bottom: 60px
+
+.modal .input_copy input
+  width: 100%
+  height: 40px
+  background: #F8FAFB
+  border: 0
+  padding: 0 17px
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #101218
+
+.modal .input_copy .copy
+  position: absolute
+  top: 50%
+  right: 15px
+  transform: translateY(-50%)
+  font-family: "Roboto"
+  font-style: normal
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  text-decoration-line: underline
+  color: #242834
+  border: 0
+  background-color: transparent
+
+.modal .title
+  max-width: 60%
+  font-family: "Gilroy", sans-serif
+  font-weight: 900
+  font-size: 28px
+  line-height: 35px
+  color: #4088DD
+  margin-bottom: 36px
+
+.modal .img
+  position: absolute
+  top: 95px
+  right: 70px
+
+.modal .img2
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  max-width: 30%
+  height: 100%
+  object-fit: contain
+.modal .box
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  justify-content: space-between
+
+.modal .box .left
+  width: 360px
+
+.modal .box .right
+  width: 360px
+
+.modal .input
+  max-width: 100%
+  width: 100%
+  margin-bottom: 40px
+
+.modal .input .input_wrap
+  position: relative
+
+.modal .input .icon
+  position: absolute
+  bottom: 12px
+  right: 23px
+
+.modal .input h6
+  font-family: "Gilroy", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #171A23
+  margin-bottom: 6px
+
+.modal .input input
+  width: 100%
+  height: 60px
+  background: #F6F8F9
+  border-radius: 5px
+  padding: 0 22px
+  font-family: "Gilroy", sans-serif
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  color: #171A23
+  border: 0
+
+.modal .input .input_box
+  display: flex
+  justify-content: space-between
+
+.modal .input .input_box input
+  width: 175px
+  padding-right: 15px
+
+.modal .input textarea
+  width: 100%
+  min-width: 100%
+  max-width: 100%
+  height: 170px
+  min-height: 170px
+  max-height: 170px
+  background: #F6F8F9
+  border-radius: 5px
+  padding: 20px
+  border: 0
+
+.modal .time
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-bottom: 70px
+
+.modal .time h6
+  width: 100%
+  font-family: "Gilroy", sans-serif
+  font-weight: 400
+  font-size: 14px
+  line-height: 16px
+  color: #171A23
+  margin-bottom: 5px
+
+.modal .time span
+  font-family: "Roboto", sans-serif
+  font-weight: 100
+  font-size: 73px
+  line-height: 86px
+  color: #171A23
+  text-align: center
+  margin: 0 18px
+
+.modal .time input
+  width: 153px
+  height: 153px
+  background: #F6F8F9
+  border-radius: 5px
+  text-align: center
+  font-family: "Gilroy", sans-serif
+  font-weight: 100
+  font-size: 73px
+  line-height: 83px
+  color: #171A23
+  border: 0
+
+.modal2
+  height: 364px
+
+.modal2 .img2
+  top: 9px
+  right: 63px
+
+.modal3
+  max-width: 1025px
+
+.modal__btn
+  max-width: 343px
+  width: 100%
+  height: 60px
+  background: #546EDB
+  border-radius: 14px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Gilroy", sans-serif
+  font-weight: 700
+  font-size: 18px
+  line-height: 22px
+  color: #FFFFFF
+  border: 0
+
+.modal__btn2
+  max-width: 330px
+  width: 100%
+  height: 60px
+  background: #6FE1B8
+  border-radius: 14px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Gilroy", sans-serif
+  font-weight: 700
+  font-size: 18px
+  line-height: 22px
+  color: #FFFFFF
+  border: 0
+
+.datePick
+  background: #F6F7FE
+  padding: 15px
+  min-height: 48px
+  width: 100%
+  padding-left: 88px
+  position: relative
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 10px
+  .calendarRequestSvg
+    position: absolute
+    left: 0
+    bottom: 0
+    top: 0
+    background: #6FE1B8
+    border-radius: 10px
+    width: 77px
+    display: flex
+    align-items: center
+    .calendarSvg
+      padding-left: 26px
+      overflow: visible
+
+.dateInputPick
+  position: relative
+  font-weight: 500
+  font-family: "Roboto"
+  font-size: 15px
+  line-height: 18px
+  color: rgba(0, 0, 0, 0.4)
+  .modalClickCalendar
+    position: absolute
+    right: 22px
+    top: 40px
+    cursor: pointer
+
+.modal .box .right
+  width: 510px
+
+.Calendar__modal
+  position: relative
+  background: #F6F8F9
+  border-radius: 8px
+  padding-top: 10px
+  margin-top: 22px
+
+.nice-dates-day_month
+  top: -8px
+
+.nice-dates-week-header
+  box-shadow: none
+
+.nice-dates-day
+  font-weight: 600
+  font-size: 18px
+  line-height: 18px
+  letter-spacing: 1.25px
+  height: 56px
+
+.calendar__p
+  position: absolute
+  top: -44px
+  left: 26px
+
+.nice-dates-grid_container
+  padding-top: 10px
+
+.nice-dates-navigation_previous:before, .nice-dates-navigation_next:before
+  width: 8px
+  height: 8px
+
+.nice-dates-navigation_previous, .nice-dates-navigation_next
+  padding: 22px 6px
+
+.nice-dates-day:before
+  background-color: #6FE1B8
+
+.nice-dates-day:after
+  border: 2px solid #6FE1B8
+
+.nice-dates-day.-today
+  color: #6FE1B8
+
+.nice-dates-grid
+  height: 360px
+
+.nice-dates-navigation_current
+  font-size: 15px
+  margin-bottom: 4px
+
+.dn
+  display: none
+
+.respond_modal
+  color: #4088DD
+  position: absolute
+  margin-top: -28px
+
+.modal_overlay
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  background: rgba(44, 42, 42, 0.65)
+  z-index: 10
+
+.modal_container
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background: #fff
+  border-radius: 10px
+  z-index: 15
+  width: 450px
+  padding: 32px 44px 48px
+
+.modal____close
+  position: absolute
+  right: -70px
+  width: 70px
+  height: 70px
+  top: -10px
+
+.modal__title
+  margin-bottom: 18px
+  font-weight: 700
+  font-size: 34px
+  line-height: 130%
+  color: #000000
+
+.mobile_platforms
+  display: flex
+  justify-content: space-between
+
+.mobile_platform
+  width: 111px
+  height: 37px
+  background: #FFFFFF
+  border: 1px solid #546EDB
+  border-radius: 5px
+  padding: 2px
+  font-weight: 700
+  font-size: 10px
+  line-height: 115%
+  color: #546EDB
+  display: flex
+  align-items: center
+  cursor: pointer
+  &.active
+    background: #546EDB
+    color: #fff
+  img
+    width: 31px
+    min-width: 31px
+    height: auto
+    margin-right: 4px
+
+.mobile_qr_name
+  margin: 13px 0 10px
+  font-weight: 700
+  font-size: 24px
+  line-height: 130%
+  color: #546EDB
+  text-align: center
+
+.mobile_qr_image
+  background: #FFFFFF
+  border: 11px solid #546EDB
+  border-radius: 15px
+  height: 358px
+  width: 100%
+  padding: 9px
+  img
+    width: 100%
+
+.modal____close
+  cursor: pointer
+  transition: all 0.4s
+  &:hover
+    opacity: 0.8
+
+.modalOrdered
+  width: 450px
+  height: 477px
+  padding: 32px 40px 36px
+  border-radius: 10px
+  text-align: center
+  .title
+    max-width: 100%
+    margin-bottom: 0
+    color: #546EDB
+    font-weight: 800
+    font-size: 36px
+    line-height: 110%
+
+.closeModal
+  right: 16px
+  top: 16px
+  cursor: pointer
+  position: absolute
+
+.modalOrderText
+  font-weight: 500
+  font-size: 18px
+  line-height: 22px
+  color: #000000
+
+.modalOrderedBtn
+  width: 100%
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #fff
+  background: #546EDB
+  border-radius: 10px
+  font-weight: 700
+  font-size: 20px
+  line-height: 25px
+  cursor: pointer
+  transition: all 0.4s
+  &:hover
+    background: lighten(#546EDB, 5%)
+
+.modal__card3
+  height: auto
+  border-radius: 10px
+  padding: 32px 40px
+  max-width: 450px
+  .title
+    color: #546EDB
+    font-weight: 800
+    font-size: 36px
+    line-height: 110%
+    text-align: center
+    max-width: 100%
+    margin-bottom: 4px
+  .input
+    margin-bottom: 0
+    textarea
+      margin-bottom: 20px
+      background: #F6F7FE
+      border: 1px solid rgba(84, 110, 219, 0.2)
+      border-radius: 10px
+      resize: none
+    h6
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #000
+    input
+      height: 48px
+      background: #F6F7FE
+      border: 1px solid rgba(84, 110, 219, 0.2)
+      border-radius: 10px
+  .request_sub_text
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    color: #000000
+    text-align: center
+    margin-bottom: 28px
+  .bordered_bottom
+    margin: 0 -40px 30px
+    border: 1px solid #DDE2F8
+    border-radius: 8px
+    padding: 25px 40px 28px
+  .input_margin_15
+    margin-bottom: 15px
+  .modal__btn
+    max-width: 100%
+  .request_time
+    position: relative
+    .time_request_left
+      position: absolute
+      left: 0
+      bottom: 0
+      top: 0
+      background: #6FE1B8
+      border-radius: 10px
+      width: 41px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #546EDB
+    input
+      padding-left: 60px
+      padding-right: 5px !important
+  .input_wrap
+    margin-bottom: 0
+  .Calendar__modal
+    margin-top: 0
+    margin-bottom: 12px
+
+.payment_req_wrap
+  position: relative
+  input
+    padding-left: 60px !important
+  .payment_req_left, .payment_req_right
+    position: absolute
+  .payment_req_left
+    left: 0
+    bottom: 0
+    top: 0
+    width: 41px
+    background: #546EDB
+    border-radius: 10px
+    font-size: 14px
+    line-height: 17px
+    font-weight: 500
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+  .payment_req_right
+    right: 14px
+    top: 12px
+
+.request_address_svg
+  position: absolute
+  right: 12px
+  top: 10px
+
+input[type="time"]::-webkit-calendar-picker-indicator
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='27' fill='none'%3E%3Ccircle cx='13.5' cy='13.5' r='13.5' fill='%236FE1B8'/%3E%3Cpath fill='%23fff' d='M13.5 6a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm3 8.25h-3a.75.75 0 0 1-.75-.75V9a.75.75 0 1 1 1.5 0v3.75h2.25a.75.75 0 1 1 0 1.5Z'/%3E%3C/svg%3E")
+  zoom: 1.5
+  cursor: pointer
+  margin-right: -4px
+
+@media(max-width: 900px)
+  .modal_container
+    width: 75%
+  .modal__title
+    text-align: center
+    font-size: 25px
+  .modal____close
+    right: -56px
+  .mobile_platforms
+    flex-wrap: wrap
+    gap: 10px
+  .mobile_platform
+    width: 100%
+  .mobile_qr_image
+    height: unset
+    img
+      width: 100%
+
+@media screen and (max-width: 768px)
+  .modal__categories
+    z-index: 100
+    background: #fff
+    top: 80px
+    padding-top: 50px !important
+
+  .modal__categories
+    .modal__close
+      display: none
+
+  .modal__overlay
+    padding-top: 40px
+    padding-bottom: 40px
+    padding-left: 7px
+    padding-right: 7px
+    overflow-y: auto
+  .modal .img
+    display: none
+  .modal .img2
+    width: 148px
+    top: 21px
+    right: 14px
+  .modal .time input
+    width: 123px
+    height: 103px
+    font-size: 53px
+    line-height: 60px
+  .modal .time
+    justify-content: space-between
+    margin-bottom: 62px
+  .modal .time span
+    margin: 0
+  .modal
+    max-width: 350px
+    height: auto
+    padding: 44px 33px 45px 30px
+  .modal .title
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 30px
+  .modal2 .title
+    margin-bottom: 123px
+  .modal .time h6
+    margin-bottom: 16px
+  .modal .soc
+    margin-top: 20px
+    margin-bottom: 50px
+  .modal .soc .item
+    width: 43px
+    height: 43px
+    margin-right: 20px
+  .modal .input_copy
+    width: 100%
+    margin-bottom: 62px
+
+.buttons__modal_calendar
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.btn_custom_modal
+  border: none
+  background: transparent
+  position: relative
+  font-weight: 700
+  font-size: 14px
+  line-height: 17px
+  border-radius: 7px
+  transition: all 0.4s
+  padding-right: 28px
+  .right_side__btn
+    position: absolute
+    right: -1px
+    top: 0
+    bottom: 0
+  &.btn_save
+    background: #289A71
+    color: #fff
+  &.btn_cancel
+    background: #FFFFFF
+    border: 1px solid #546EDB
+    color: #546EDB
+
+.btn_custom_modal
+  width: 174px
+  height: 47.52px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.modal.modal_5
+  width: 425px
+  padding: 26px 32px 26px 30px
+  border-radius: 6.69291px
+  justify-content: flex-start
+  .closeModal
+    right: 26px
+    top: 26px
+    zoom: 0.7
+  .title
+    max-width: 100%
+    text-align: center
+    font-weight: 800
+    font-size: 24px
+    line-height: 30px
+    color: #000000
+    margin-bottom: 0
+  .look-calendar
+    padding: 0
+  .nice-dates-navigation_current
+    font-weight: 600
+    font-size: 22px
+    line-height: 30px
+  .nice-dates-week-header_day
+    font-family: Roboto
+    font-weight: 600
+    font-size: 17px
+    line-height: 20px
+    color: #1F2023
+  .nice-dates-week-header
+    box-shadow: none
+    border-bottom: 1px solid #f7f4f4
+    padding-bottom: 20px
+  .nice-dates-navigation_previous:before, .nice-dates-navigation_next:before
+    border-right: 2px solid #546EDB
+    border-top: 2px solid #546EDB
+  .nice-dates-grid, .nice-dates-grid_container.-origin-top
+    height: 277px !important
+  .nice-dates-navigation_previous, .nice-dates-navigation_next
+    width: calc(20%)
+
+@keyframes fadein
+  0%
+    opacity: 0
+  50%
+    opacity: 0.5
+  100%
+    opacity: 1
+
+@keyframes fade-out
+  0%
+    opacity: 1
+  50%
+    opacity: 0.5
+  100%
+    opacity: 0
+
+.modal__overlay.entering
+  animation: fadein 0.2s ease-in forwards
+
+.modal__overlay.exiting
+  animation: fade-out 0.2s ease-in forwards
+
+.not_working_day_text
+  font-weight: 700
+  font-size: 14px
+  line-height: 17px
+  color: #D32121
+
+.not_working_day
+  margin-top: 10px
+  .container
+    position: relative
+    padding-left: 46px
+    margin-bottom: 20px
+    cursor: pointer
+    font-size: 22px
+    user-select: none
+    background: #F6D3D3
+    border-radius: 50px
+    height: 46px
+    display: flex
+    align-items: center
+  .container input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+  .checkmark
+    position: absolute
+    top: 7px
+    left: 6px
+    height: 32px
+    width: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #fff
+    border-radius: 100%
+  .checkmark:after
+    content: ""
+    position: absolute
+    display: flex
+    width: 18px
+    height: 18px
+    background: #D4E2F4
+    border-radius: 100%
+  .container input:checked ~ .checkmark:after
+    background-color: #D32121
+
+.modal.modal_5
+  .nice-dates-day_date
+    width: 38px
+    height: 38px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+  .nice-dates-day.-selected:not(:hover) *,
+  .nice-dates-day.-selected
+    color: red
+  .nice-dates-day
+    font-size: 16px
+  .nice-dates-day:after
+    border: 0
+  .nice-dates-day:before
+    background-color: transparent
+  .nice-dates-day.-selected
+    .nice-dates-day_date
+      background: rgba(211, 33, 33, 0.2)
+  .nice-dates-day.-today
+    .nice-dates-day_date
+      background: #6FE1B8
+      color: #546EDB
+  .nice-dates-day.-today.-selected
+    .nice-dates-day_date
+      background: rgba(211, 33, 33, 0.2)
+      color: #546EDB
+
+.modal.modal_payment
+  width: 425px
+  border-radius: 6px
+  padding: 32px 25px 30px
+  .title
+    font-weight: 800
+    font-size: 24px
+    line-height: 30px
+    color: #000000
+    max-width: 100%
+    text-align: center
+    margin-bottom: 2px
+  .modal_title__sub
+    margin-bottom: 16px
+    text-align: center
+    font-weight: 500
+    line-height: 19px
+  .closeModal
+    zoom: 0.7
+    right: 32px
+    top: 24px
+  .modal_payments__buttons
+    button
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 60px
+      border-radius: 5px
+      border: none
+      font-weight: 700
+      line-height: 20px
+      color: #fff
+      &.payment_online
+        margin-bottom: 16px
+        background: #546edb
+      &.payment_check
+        background: #4CBE96
+  .payment_button
+    position: relative
+    .icon
+      width: 60px
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      position: absolute
+      left: 0
+      border-radius: 5px
+  .payment_online
+    .icon
+      background: #4761D1
+  .payment_check
+    .icon
+      background: #6FE1B8
+
+.fade-payment-enter
+  opacity: 0
+
+.fade-payment-exit
+  opacity: 1
+
+.fade-payment-enter-active
+  opacity: 1
+
+.fade-payment-exit-active
+  opacity: 0
+
+.fade-payment-enter-active,
+.fade-payment-exit-active
+  transition: opacity 300ms
+
+.modal .input.input_payment
+  position: relative
+  margin-bottom: 16px
+
+.modal .input.input_payment input
+  background: #F6F7FE
+  border: 1px solid rgba(84, 110, 219, 0.2)
+  border-radius: 5px
+  &::placeholder
+    font-family: 'Roboto'
+    font-weight: 400
+    font-size: 15px
+    line-height: 18px
+    color: rgba(0, 0, 0, 0.4)
+
+.payment__button_apply
+  width: 100%
+  border: none
+  color: #fff !important
+  height: 60px !important
+  background: #546EDB !important
+  border-radius: 5px
+  font-weight: 700
+  font-size: 16px
+  line-height: 20px
+
+.payment_info_text
+  font-weight: 500
+  font-size: 10px
+  color: #000
+  margin-top: 20px
+  line-height: 126.8%
+  a
+    color: #000
+    text-decoration: underline
+    &:hover
+      text-decoration: none

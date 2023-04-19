@@ -1,0 +1,45 @@
+@import "../../styles/variables.sass"
+
+.categories
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+
+.item
+    display: flex
+    gap: 10px
+    align-items: center
+    background: #F6F7FE
+    border-radius: 10px
+    padding: 5px 30px 5px 8px
+    border: 1px solid rgba(84, 110, 219, 0.2)
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    span
+        color: rgb(111, 225, 184)
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+    &:hover, &.active
+        background: $blue
+        border: 1px solid $blue
+        color: #fff
+    h5
+        @include  p-16-500
+        margin-bottom: 0
+
+.type_img
+    width: 45px
+    object-fit: contain
+
+@media (max-width: 1024px)
+    .item
+        width: 100%
+
+    .favorites
+        min-height: 200px
+        padding: 0
+        &__types
+            padding: 15px 10px 20px
+        &__list_wrapper
+            padding: 15px 10px

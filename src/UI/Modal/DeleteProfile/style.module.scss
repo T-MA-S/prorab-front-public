@@ -1,0 +1,14 @@
+.modal {
+    &__delete {
+        height: unset;
+        h3 {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        &_btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    }
+}

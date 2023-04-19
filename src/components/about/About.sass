@@ -1,0 +1,279 @@
+.history_company__banner
+  background: url('../../assets/images/history-banner.png') no-repeat bottom
+  background-size: cover
+  padding: 65px 0
+  overflow: hidden
+
+  .title
+    font-weight: 800
+    font-size: 40px
+    line-height: 134.75%
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 75px
+
+  .line
+    position: relative
+    margin-bottom: 21px
+
+    img
+      position: relative
+      z-index: 2
+
+    &::after
+      content: ""
+      width: 1080px
+      height: 2px
+      background: url('../../assets/images/line2.png') left
+      background-size: 100%
+      position: absolute
+      top: 11px
+      left: 59.9%
+
+  .box
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    padding-left: 32px
+    gap: 30px
+
+    .wrap
+      width: 100%
+      &:last-child .year h5
+        font-size: 15px
+      &:last-child .year span
+        font-size: 12px
+
+      &:nth-child(1) .year::before
+        background-image: url('../../assets/images/about-1.png')
+      &:nth-child(2) .year::before
+        background-image: url('../../assets/images/about-2.png')
+      &:nth-child(3) .year::before
+        background-image: url('../../assets/images/about-3.png')
+      &:nth-child(4) .year::before
+        background-image: url('../../assets/images/about-4.png')
+      &:not(:last-child) .year::after
+        content: ""
+        position: absolute
+        background-image: url('../../assets/images/about-progress.svg')
+        width: 145px
+        height: 18px
+        background-size: 100%
+        background-repeat: no-repeat
+        left: 127px
+    .year
+      width: 100%
+      color: #546EDB
+      margin-bottom: 45px
+      width: 103px
+      height: 103px
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        width: 160%
+        height: 138%
+        background-size: 100%
+        background-repeat: no-repeat
+        top: -18px
+        left: -17px
+        z-index: 0
+      h5
+        margin: 0
+        font-weight: 800
+        font-size: 30px
+        line-height: 134.75%
+        text-transform: uppercase
+        z-index: 1
+      span
+        font-size: 18px
+        text-transform: uppercase
+        z-index: 1
+
+    .text
+      font-weight: 500
+      font-size: 17px
+      line-height: 120%
+      color: #FFFFFF
+      li
+        position: relative
+        &::before
+          content: ""
+          width: 7px
+          height: 7px
+          display: block
+          position: absolute
+          left: -15px
+          top: 6px
+          border-radius: 100%
+          background: #6FE1B8
+        &:not(:last-child)
+          margin-bottom: 10px
+
+.history_company__img
+  height: 375px
+  width: 100%
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+    height: 100%
+    width: auto
+    -webkit-transition: all 0.4s linear
+    transition: all 0.4s linear
+
+.history_company__content
+  order: -1
+  width: 100%
+  height: auto
+  min-height: 290px
+  width: 50%
+  height: 960px
+  background: #fff
+  padding: 180px 114px 100px 100px
+  .title
+    font-weight: 800
+    font-size: 28px
+    line-height: 134.75%
+    color: #000000
+    margin-bottom: 8px
+
+  .text
+    font-size: 14px
+    line-height: 134.75%
+    margin-bottom: 12px
+    font-weight: 400
+    font-size: 22px
+    line-height: 134.75%
+    color: #000000
+    margin-bottom: 16px
+  h6.title
+    margin-bottom: 18px
+
+.history_company__img
+  width: 50%
+  height: 960px
+  position: relative
+  overflow: hidden
+
+.history_company__box
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row-reverse
+  &:nth-child(odd)
+    flex-direction: row
+  ul
+    margin-bottom: 50px
+  li
+    font-size: 24px
+    line-height: 30px
+    &:not(:last-child)
+      margin-bottom: 10px
+  &:hover .history_company__img img
+    transform: translate(-50%, -50%) scale(1.06)
+    transition: all 3s linear
+
+@media screen and (max-width: 1024px)
+  .history_company__content
+    padding: 20px
+
+  .history_company__banner
+    .box
+      padding-left: 10px
+      gap: 15px
+      .text
+        font-weight: 400
+        font-size: 14px
+        line-height: 115%
+
+@media screen and (max-width: 768px)
+  .history_company__banner
+    .box
+      flex-direction: column
+      padding-left: 55px
+      gap: 0
+      li
+        font-size: 14px
+        line-height: 134.75%
+
+  .history_company__box
+    li
+      font-size: 14px
+      line-height: 134.75%
+
+  .history_company__img
+    height: 375px
+    width: 100%
+    img
+      width: 100%
+      object-fit: cover
+
+  .history_company__content
+    order: -1
+    width: 100%
+    height: auto
+    min-height: 290px
+    padding: 40px 22px 30px 23px
+    .title
+      line-height: 134.75%
+      margin-bottom: 8px
+      font-size: 20px
+    .text
+      font-size: 14px
+      line-height: 134.75%
+      margin-bottom: 12px
+  .history_company__banner
+    height: unset
+    padding: 20px 0
+    position: relative
+    .title
+      font-size: 20px
+      line-height: 134.75%
+      margin-bottom: 0
+    .box
+      flex-direction: column
+      padding-left: 37px
+      .wrap
+        width: unset
+        margin-top: 55px
+        &:not(:last-child) .year::after
+          width: 21px
+          height: 265%
+          left: -41px
+          background-size: 83%
+          top: 50px
+          background-image: url('../../assets/images/about-progress-mob.svg')
+
+      .year
+        font-size: 24px
+        line-height: 134.75%
+        margin-bottom: 27px
+        position: relative
+      .text
+        font-size: 14px
+        line-height: 134.75%
+
+@media screen and (max-width: 460px)
+  .history_company__banner
+    padding: 30px 0
+    .box
+      .wrap:last-child .year
+        h5, span
+          font-size: 12px
+      .year
+        h5
+          margin-bottom: -12px
+          font-size: 20px
+          span
+            font-size: 15px
+    .title
+      margin-left: 15px
+      font-size: 24px

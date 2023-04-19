@@ -1,0 +1,122 @@
+.partners
+    h1
+        font-weight: 800
+        font-size: 60px
+        line-height: 75px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+    .hero
+        padding: 80px 100px
+        color: #fff
+        position: relative
+        z-index: 1
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        background-image: url(../../assets/images/partners/partners-bg.png)
+        border-radius: 14px
+
+    .descr
+        font-weight: 500
+        font-size: 32px
+        line-height: 39px
+        text-align: center
+        color: #FFFFFF
+    h2
+        margin-bottom: 20px
+        font-weight: 800
+        font-size: 32px
+        line-height: 110%
+    section
+        padding: 25px 0
+    .operators
+        padding-top: 50px
+    .shops
+        padding-bottom: 50px
+    ul
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        gap: 20px
+    li
+        width: 100%
+        display: flex
+        cursor: pointer
+
+        &:hover
+            img
+                border-top: 5px solid rgba(111, 225, 184)
+                border-bottom: 5px solid rgba(84, 110, 219)
+            p
+                color: #546EDB
+        a
+            display: flex
+            width: 100%
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            background: #FFFFFF
+            border-radius: 10px
+        img
+            width: 100%
+            height: 90px
+            padding: 20px
+            object-fit: contain
+            border-radius: 10px
+            border-top: 5px solid rgba(111, 225, 184, 0.5)
+            border-bottom: 5px solid rgba(84, 110, 219, 0.5)
+            transition: border .3s ease-in-out
+
+        p
+            padding: 10px
+            font-weight: 600
+            font-size: 18px
+            line-height: 22px
+            transition: color .3s ease-in-out
+
+@media (max-width: 1200px)
+    .partners
+        ul
+            grid-template-columns: repeat(4, 1fr)
+        h1
+            font-size: 50px
+            line-height: 50px
+
+        h2
+            font-size: 32px
+            margin-bottom: 15px
+
+@media (max-width: 768px)
+    .partners
+        ul
+            grid-template-columns: repeat(2, 1fr)
+        h1
+            margin-bottom: 0
+            font-size: 24px
+            line-height: 30px
+        .descr
+            max-width: 300px
+            margin: 0 auto
+            font-size: 14px
+            line-height: 17px
+
+        h2
+            margin-bottom: 60px
+            font-size: 22px
+            line-height: 110%
+
+        section
+            padding: 15px 0
+
+        .hero
+            padding: 32px 0 45px
+            border-radius: 10px
+            background-image: url(../../assets/images/partners/bg-mob.png)
+            background-position: bottom
+
+        .operators
+            padding-top: 30px
+
+        li p
+            font-size: 14px
+            line-height: 17px

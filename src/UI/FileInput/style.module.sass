@@ -1,0 +1,108 @@
+.fileinput
+    margin-right: 20px
+    &__modal
+        position: absolute
+        z-index: 100
+        background: #FFFFFF
+        border-radius: 7px
+        width: 400px
+        padding: 30px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        h4
+            margin-bottom: 5px
+            font-weight: 800
+            font-size: 20px
+            line-height: 25px
+            text-align: center
+        .descr
+            margin-bottom: 20px
+            text-align: center
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+    &__modal_overlay
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 50
+        background: rgba(0, 0, 0, 0.6)
+        &_close
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            width: 100%
+
+.canvas
+    display: none
+
+.input_wrapper
+    position: relative
+    width: 115px
+    height: 115px
+    border-radius: 100%
+
+.btns
+    display: flex
+    gap: 12px
+
+.btn__wrapper
+    background: #ffffff
+    width: 100%
+    border-radius: 7px
+    position: relative
+    cursor: pointer
+    font-weight: 700
+    font-size: 13px
+    line-height: 16px
+    padding: 15px
+    transition: all 0.3s ease-in-out
+    font-family: "Gilroy"
+    &_save
+        border: 1px solid #289A71
+        background: #289A71
+        color: #fff
+        &:hover
+            background: #3fc092
+
+    &_cancel
+        border: 1px solid #546EDB
+        color: #546EDB
+        background: #fff
+        &:hover
+            color: #fff
+            background: #546EDB
+
+    span
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        border-radius: 5px
+        display: flex
+        align-items: center
+        padding: 11px
+
+    .btn__save
+        background: #3fc092
+
+    &:hover
+        color: #fff
+
+    .btn__cancel
+        background: #546EDB
+
+@media screen and ( max-width: 576px)
+    .btns
+        flex-direction: column
+        p
+            text-align: center
+    .fileinput
+        margin-right: 10px
+        &__modal
+            padding: 25px 15px
+            width: 300px

@@ -1,0 +1,46 @@
+.adv-feedback
+    .slick-slider
+        max-width: 600px
+        position: relative
+        &.shadow
+            &::after
+                content: ""
+                position: absolute
+                right: 0
+                top: 0
+                height: 100%
+                display: block
+                width: 155px
+                transform: scaleX(-1)
+                background: linear-gradient(90deg, #FFFFFF 2.5%, rgba(255, 255, 255, 0) 55.36%)
+    .slick-track
+        display: flex
+        margin: 0 -10px
+    .slick-slide
+        margin: 0 10px
+
+    .slick-prev
+        right: 37px
+        left: auto
+        top: -30px
+        &::before
+            display: none
+
+    .slick-next
+        right: 0
+        top: -30px
+
+        &::before
+            display: none
+
+@media screen and (max-width: 768px)
+    .adv-feedback
+
+        .slick-slider
+            max-width: unset
+
+        .slick-track
+            margin: 0
+
+        .slick-slide
+            margin: 0

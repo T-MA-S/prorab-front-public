@@ -1,0 +1,109 @@
+.FAQ {
+    &__load {
+        position: relative;
+        min-height: 300px;
+    }
+    &__wrapper {
+        padding: 80px 0;
+        background-image: url(../../assets/images/FAQ.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 60px;
+            line-height: 75px;
+        }
+
+        p {
+            margin: 0 auto;
+            margin-bottom: 42px;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 39px;
+            max-width: 1000px;
+        }
+    }
+
+    &__nav {
+        padding: 30px;
+        background: #4088dd;
+        .wrapper {
+            display: flex;
+            gap: 15px;
+            color: #fff;
+            flex-wrap: wrap;
+            .tab {
+                padding: 13px 23px;
+                background-color: rgba(255, 255, 255, 0.2);
+                border: 1px solid rgba(111, 225, 184, 0.3);
+                border-radius: 50px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+                &.active {
+                    background-color: #fff;
+                    color: #546edb;
+                }
+            }
+        }
+    }
+}
+
+.acc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 0 50px 0;
+    h2 {
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .FAQ {
+        &__wrapper {
+            padding: 30px 0;
+            background-image: url(../../assets/images/FAQ-mob.png);
+            h1 {
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 5px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 17px;
+                max-width: 500px;
+                margin-bottom: 0;
+            }
+        }
+        &__nav {
+            padding: 15px 0;
+            .wrapper {
+                gap: 10px;
+                div {
+                    padding: 10px 17px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .acc {
+        padding: 20px 0;
+        gap: 10px;
+        h2 {
+            margin-bottom: 0;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.confirm
+    padding: 55px 0
+    font-family: "Roboto"
+    h2
+        margin-bottom: 20px
+        text-align: center
+        font-weight: 800
+        font-size: 32px
+        line-height: 40px
+        position: relative
+        font-family: "Gilroy"
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 55px
+            background: url(../../assets/images/mailConfirm/check.png) no-repeat center
+            background-size: 100%
+            width: 144px
+            height: 144px
+            transform: rotate(-50deg)
+        &::after
+            content: ""
+            position: absolute
+            right: 0
+            top: 150px
+            background: url(../../assets/images/mailConfirm/check.png) no-repeat center
+            background-size: 100%
+            width: 149px
+            height: 149px
+        span
+            font-weight: 700
+            font-size: 27px
+            line-height: 33px
+    &__bg
+        display: block
+        margin: 0 auto
+        margin-bottom: 20px
+    .about
+        font-size: 20px
+        text-align: center
+        &__first
+            margin-bottom: 20px
+        &__last
+            margin-bottom: 40px
+    ul
+        display: flex
+        max-width: 560px
+        margin: 0 auto
+        margin-bottom: 20px
+        gap: 20px
+        justify-content: center
+        align-items: center
+        li
+            display: flex
+            gap: 10px
+            width: 100%
+            p
+                font-size: 15px
+                line-height: 130%
+    .btns
+        display: flex
+        gap: 10px
+        justify-content: center
+        a
+            width: 100%
+            padding: 20px 45px
+            padding-left: 80px
+            max-width: 255px
+            border-radius: 5px
+            text-align: center
+            font-weight: 700
+            font-size: 15px
+            line-height: 19px
+            position: relative
+            &:first-child
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 33px
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    width: 32px
+                    height: 32px
+                    background-image: url(../../assets/images/setting.svg)
+                    background-repeat: no-repeat
+                    background-size: 100%
+            &:last-child
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 33px
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    width: 32px
+                    height: 32px
+                    background-image: url(../../assets/images/user-blue.svg)
+                    background-repeat: no-repeat
+                    background-size: 100%
+        .blue
+            color: #fff
+            background-color: #546EDB
+        .green
+            color: #546EDB
+            background-color: #6FE1B8
+@media screen and (max-width: 576px)
+    .confirm
+        h2
+            font-size: 28px
+            line-height: 35px
+            &::before, &::after
+                display: none
+            span
+                font-size: 24px
+                line-height: 30px
+        &__bg
+            margin-bottom: 10px
+        .about
+            font-size: 18px
+            &__first, &__last
+                margin-bottom: 15px
+        ul
+            flex-wrap: wrap
+            gap: 10px
+            li
+                width: calc(50% - 5px)
+                justify-content: center
+                p
+                    font-size: 12px
+                    max-width: 90px
+        .btns
+            flex-wrap: wrap

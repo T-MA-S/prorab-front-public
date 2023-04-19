@@ -1,0 +1,79 @@
+@import "./styles/fonts"
+
+html
+  scroll-behavior: smooth
+*
+  box-sizing: border-box
+  outline: none
+  &:focus
+    outline: none
+
+#root
+  overflow-x: hidden
+
+body
+  font-family: 'Gilroy'
+  background: #fff
+  color: #000
+
+body.noscroll
+  overflow: hidden
+
+main
+  background: #F3F4F9
+
+.container_wrap
+  padding: 0 40px
+
+.container
+  max-width: 1220px
+  width: 100%
+  padding: 0 20px
+  margin: 0 auto
+
+ul
+  margin: 0
+  padding-left: 0
+  list-style-type: none
+
+a
+  text-decoration: none
+  transition: all 0.3s
+
+svg
+  path
+    transition: all 0.3s
+
+button
+  cursor: pointer
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  &:focus
+    outline: 0 !important
+
+.error__react_module
+  color: red
+  font-size: 18px
+
+h1, h2, h3, h4, h5, h6, p
+  margin-top: 0
+
+p
+  margin-bottom: 0
+
+.main
+  min-height: 46.7vh
+.main.fixedHeader
+  padding-top: 132px
+
+.radio__box_favorite
+  margin-bottom: 50px
+
+//блокировка копировать-вставить если приложение
+.copyBan
+  -ms-user-select: none
+  -moz-user-select: none
+  -webkit-user-select: none
+  user-select: none
+
+@import './styles/sliders.sass'
+@import './styles/media.sass'

@@ -1,0 +1,824 @@
+.equipment
+  padding-top: 60px
+
+  &__wrap
+    padding: 55px 0
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    justify-content: space-between
+    gap: 20px
+
+  &__aside
+    width: 25%
+    min-width: 280px
+
+    .block_open
+      padding: 0 14px 13px 14px
+      display: none
+
+    .btn_open
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      align-items: center
+      width: 100%
+      background-color: transparent
+      border: 0
+      padding: 14px
+      font-family: "Gilroy", sans-serif
+      font-weight: 700
+      font-size: 16px
+      line-height: 20px
+      color: #546EDB
+      .arrow-container
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 25px
+        height: 25px
+        background: #A7B5F2
+        margin-right: 18px
+        border-radius: 4px
+        transition: background .3s ease-in-out
+
+        svg
+          transition: transform .3s ease-in-out
+
+      &.active .arrow-container
+        background: #546EDB
+      &.active svg
+        transform: rotate(-180deg)
+
+    .title_menu,  .close_filter
+      display: none
+
+    .wrap
+      background: #FFFFFF
+      border-radius: 8px
+
+    .box
+      border-radius: 8px
+      border-bottom: 1px solid #F3F4F9
+
+    .price
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      align-items: center
+      gap: 13px
+
+      .input
+        height: 60px
+        background: #F3F4F9
+        border-radius: 4px
+        position: relative
+        input
+          width: 100%
+          height: 100%
+          background-color: transparent
+          border: 0
+          padding: 5px 5px 5px 42px
+          font-weight: 500
+          font-size: 16px
+          line-height: 24px
+          color: #4088DD
+          &::placeholder
+            color: #4088DD
+
+        &:nth-child(1):after
+          content: "от"
+          position: absolute
+          top: 50%
+          left: 20px
+          transform: translateY(-50%)
+          font-weight: 500
+          font-size: 16px
+          line-height: 24px
+          color: #4088DD
+
+        &:nth-child(2):after
+          content: "до"
+          position: absolute
+          top: 50%
+          left: 20px
+          transform: translateY(-50%)
+          font-weight: 500
+          font-size: 16px
+          line-height: 24px
+          color: #4088DD
+
+    .checkbox
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      margin-bottom: 20px
+      position: relative
+
+      input
+        width: 20px
+        height: 20px
+        position: relative
+        z-index: -1
+        margin-right: 12px
+
+      label
+        font-family: "Gilroy", sans-serif
+        font-weight: 400
+        font-size: 18px
+        line-height: 100%
+        color: #414253
+        cursor: pointer
+
+        &::after
+          content: ""
+          width: 20px
+          height: 20px
+          position: absolute
+          top: 0
+          left: 0
+          background: #F3F4F9
+          border-radius: 6px
+
+      input:checked + label::after
+        background: #F3F4F9 url('../../assets/images/check.svg') no-repeat center
+        background-size: 130%
+
+  .title_h2
+    margin-bottom: 50px
+
+.app__back_btn
+  display: flex
+  align-items: center
+  gap: 10px
+  margin-bottom: 20px
+  font-weight: 600
+  color: #546EDB
+  background: transparent
+  border: none
+
+.page_nav
+  padding: 39px 0
+  background: #546EDB
+
+  .mobile_box
+    display: none
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    li
+      margin-bottom: 10px
+
+  .link
+    display: block
+    padding: 18px 50px
+    background: rgba(255, 255, 255, 0.3)
+    border-radius: 50px
+    font-family: "Roboto", sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    color: #FFFFFF
+    margin-right: 10px
+    cursor: pointer
+    transition: all 0.3s ease
+
+    &.active
+      background: #FFFFFF
+      color: #4088DD
+
+    &:hover
+      background: #FFFFFF
+      color: #4088DD
+
+  .container
+    padding: 0 !important
+
+.equipment__aside .btn_open.active + .block_open, .equipment__aside .btn_open.active + .block_open + .block_open
+  display: block
+
+.page_nav.search_page_mob .mobile_box
+  padding: 0
+
+.nav_link, .search-page__sorter
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+  font-family: "DM Sans", sans-serif
+  margin-bottom: 25px
+  button
+    font-weight: 400
+    font-size: 16px
+    line-height: 100%
+    color: #4088DD
+    border: none
+    background: transparent
+    &.active
+      font-weight: 700
+      color: #6FE1B8
+
+  p
+    font-weight: 700
+    font-size: 16px
+    line-height: 100%
+    margin-right: 24px
+    color: #546EDB
+
+  span
+    display: block
+    margin: 0 24px
+    font-size: 16px
+    line-height: 100%
+    color: #546EDB
+
+  a
+    font-weight: 400
+    font-size: 16px
+    line-height: 100%
+    color: #546EDB
+
+    &.active
+      font-weight: 700
+      color: #6FE1B8
+
+.links
+  button
+    border: none
+    background: transparent
+
+.equipment__content
+  width: 100%
+.equipment__box
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 20px
+
+.pagination
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin-top: 60px
+
+  .link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 28px
+    color: #858585
+    margin: 0 3px
+    background: rgba(255, 255, 255, 0.4)
+    border: 1px solid #FFFFFF
+    border-radius: 14px
+    transition: all 0.3s ease
+
+    &.active
+      background: #4088DD
+      border: 1px solid #4088DD
+      font-weight: 700
+      color: #FFFFFF
+
+    &:hover
+      background: #4088DD
+      border: 1px solid #4088DD
+      font-weight: 700
+      color: #FFFFFF
+
+  span
+    display: block
+    width: 123px
+    height: 1px
+    background: #4088DD
+    margin: 0 15px
+
+.equipment__special
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+  margin-bottom: 33px
+  gap: 20px
+  .product__wrap
+    cursor: pointer
+    .title
+      padding: 0
+      text-align: center
+
+  &__check
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    cursor: pointer
+    background: #FFFFFF
+    border: 1px solid #F3F4F9
+    border-radius: 15px
+    .img-wrapper
+      overflow: hidden
+      &:hover img
+        scale: 1.1
+
+    img
+      width: 100%
+      object-fit: cover
+      transition: scale .3s ease-in-out
+
+  &__check input
+    position: relative
+    z-index: -1
+    display: none
+
+  &__check input:checked + .product__wrap::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 10px solid #F3F4F9
+
+  &__check input:checked + .product__wrap::before
+    content: ""
+    width: 25px
+    height: 25px
+    position: absolute
+    top: 37px
+    right: 35px
+    background: url('../../assets/images/check.svg') no-repeat center
+
+.technique
+  padding-top: 74px
+  padding-bottom: 65px
+
+  &__wrap
+    width: 100%
+
+.slick_List
+  width: 462px
+  img
+    height: 375px
+  > button
+    z-index: 3
+  .slick-next
+    right: 10px
+  .slick-prev
+    left: 10px
+  .slick-disabled
+    background-color: #546EDB
+    opacity: 0.5
+  .slick-dots
+    bottom: 25px
+    li
+      width: fit-content
+      min-width: 26px
+      height: 8px
+      button
+        width: 100%
+        height: 100%
+        padding: 0
+        background: rgba(255, 255, 255, 0.4)
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        backdrop-filter: blur(10px)
+        border-radius: 50px
+    .slick-active
+      button
+        width: 60px
+        background: #6FE1B8
+        border: 1px solid #6FE1B8
+        backdrop-filter: blur(10px)
+
+@keyframes rollout
+  0%
+    opacity: 0
+
+  100%
+    opacity: 100%
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before
+  display: none
+
+.technique__block
+  background: #FFFFFF
+  border: 1px solid #F3F4F9
+  font-family: "Roboto", sans-serif
+  position: relative
+  animation: .4s rollout
+  height: 100%
+  width: 100%
+
+  .rating
+    height: 47px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    align-items: center
+    border-radius: 0 20px 20px 0
+    padding: 0 19px
+    font-family: "Roboto", sans-serif
+    font-weight: 700
+    font-size: 20px
+    line-height: 23px
+    color: #F9B023
+    position: absolute
+    top: 14px
+    left: 0
+    z-index: 1
+
+    svg
+      margin-right: 16px
+
+  .like
+    width: 30px
+    height: 30px
+    background: #fff
+    border-radius: 50%
+    border: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 18px
+    right: 21px
+    z-index: 1
+
+    &.active svg path
+      stroke: #F11147
+      fill: #F11147
+
+  .img
+    position: relative
+    overflow: hidden
+    img
+      width: 100%
+
+  .content
+    padding: 21px 9px 30px 19px
+    height: 382px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  .title_box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 24px
+
+  .title
+    font-weight: 700
+    font-size: 20px
+    line-height: 23px
+    text-transform: uppercase
+    color: #414253
+    margin: 0
+    max-width: 205px
+
+  .status
+    display: flex
+    align-items: center
+    padding: 10px 23px 12px 19px
+    border-radius: 40px
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+
+    svg
+      margin-right: 16px
+
+    &.active
+      background: rgba(111, 225, 184, 0.1)
+      color: #6FE1B8
+
+    .notactive
+      background: rgba(247, 169, 40, 0.1)
+      color: #F7A928
+
+    .notactive svg path
+      fill: #F7A928
+
+  .h5
+    font-weight: 700
+    font-size: 16px
+    line-height: 19px
+    text-transform: capitalize
+    color: #414253
+    margin-bottom: 11px
+
+  .text
+    max-width: 417px
+    width: 100%
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    color: #858585
+    margin-bottom: 27px
+
+  .btn
+    width: 100%
+    min-height: 50px
+    background: #546EDB
+    border-radius: 14px
+    border: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: "Gilroy", sans-serif
+    font-weight: 700
+    font-size: 18px
+    line-height: 22px
+    -webkit-transition: all 0.3s ease
+    transition: all 0.3s ease
+    color: #FFFFFF
+
+    &:hover
+      background: rgba(64, 136, 221, 0.1)
+      color: #546EDB
+      border: 1px solid #546EDB
+
+.radio_box
+  display: flex
+  margin-bottom: 33px
+
+  .radio
+    width: 50%
+    position: relative
+
+    input
+      width: 0
+      height: 0
+      position: relative
+      z-index: -1
+
+    label
+      display: block
+      width: 100%
+      border: 1px solid #E5E5E5
+      position: absolute
+      top: 0
+      left: 0
+      padding: 7px 10px
+      cursor: pointer
+
+    label h5
+      font-family: "Roboto", sans-serif
+      font-weight: 700
+      font-size: 12px
+      line-height: 15px
+      text-transform: uppercase
+      color: #546EDB
+      margin: 0
+
+    label span
+      display: block
+      font-family: "Roboto", sans-serif
+      font-weight: 400
+      font-size: 10px
+      line-height: 12px
+
+      color: #546EDB
+      margin-top: -2px
+
+    label::after
+      content: ""
+      width: 15px
+      height: 15px
+      position: absolute
+      top: 14.5px
+      right: 12.5px
+      background: url('../../assets/images/catalog/check-blue.svg') no-repeat center
+
+    &:nth-child(1) label
+      border-radius: 5px 0px 0px 5px
+      border-right-color: transparent
+      border-right: 1px solid #E5E5E5
+
+    &:nth-child(2) label
+      border-radius: 0px 5px 5px 0px
+      border-left-color: transparent
+
+    input:checked + label
+      border: 1px solid #4088DD
+      background: #4088DD
+
+      h5, span
+        color: #fff
+
+    input:checked + label::after
+      background: url('../../assets/images/catalog/check-white.svg') no-repeat center
+
+.MuiPagination-root
+  margin-top: 40px
+  ul
+    justify-content: flex-end
+    li
+      button
+        display: flex
+        align-items: center
+        justify-content: center
+        font-style: normal
+        color: #858585
+        margin: 0 3px
+        background: rgba(255, 255, 255, 0.4)
+        border: 1px solid #FFFFFF
+        border-radius: 14px
+        transition: all 0.3s ease
+        font-weight: 400
+        font-size: 24px
+        color: #858585
+        line-height: 28px
+        width: 40px
+        height: 40px
+        box-shadow: none
+        &:hover
+          background: #4088DD
+          border: 1px solid #4088DD
+          font-weight: 700
+          color: #FFFFFF
+        &.Mui-selected
+          background: #4088DD
+          border: 1px solid #4088DD
+          font-weight: 700
+          color: #FFFFFF
+          position: relative
+          margin-right: 150px
+          &:after
+            content: ''
+            width: 123px
+            height: 1px
+            background: #4088DD
+            margin: 0 15px
+            position: absolute
+            left: 38px
+          &:hover
+            background: #4088DD
+            border: 1px solid #4088DD
+            font-weight: 700
+            color: #FFFFFF
+.mui-ripple-circle
+  display: none
+
+.block_title__price
+  margin-bottom: 10px
+  font-weight: 500
+  font-size: 16px
+  color: #545454
+  .marker
+    color: #546EDB
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus
+  appearance: none
+  -moz-appearance: textfield
+
+@media screen and (max-width: 900px)
+  .page_nav.search_page_mob
+    margin-bottom: 20px
+
+  .equipment
+    display: block
+    padding-top: 20px
+  .equipment .title_h2
+    margin-bottom: 13px
+  .equipment__wrap
+    padding: 0
+  .equipment__aside
+    position: fixed
+    top: 0
+    left: -101%
+    z-index: 99
+    min-width: 100%
+    width: 100%
+    height: 100%
+    background-color: #fff
+    margin: 0
+    transform: translate(0)
+    overflow-y: auto
+    padding: 26px 0
+    transition: all 0.3s ease
+  .equipment__aside .title_menu, .equipment__aside .close_filter
+    display: block
+  .equipment__aside .title_menu
+    padding: 0 32px
+    display: block
+    font-weight: 800
+    font-size: 30px
+    line-height: 134.75%
+    color: #333
+  .equipment__aside .close_filter
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 36px
+    right: 32px
+    background-color: transparent
+    border: 0
+  .equipment__aside .close_filter::after
+    content: ""
+    width: 28px
+    height: 2px
+    border-radius: 2px
+    background: #333
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+  .equipment__aside .close_filter::before
+    content: ""
+    width: 28px
+    height: 2px
+    border-radius: 2px
+    background: #333
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(-45deg)
+  .equipment__aside.active
+    left: 0
+
+  .equipment__special__check
+    width: 33.333%
+    height: 158px
+  .equipment__special__check input:checked + .product__wrap::after
+    border: 5px solid #F3F4F9
+  .equipment__special__check input:checked + .product__wrap::before
+    width: 12px
+    height: 12px
+    top: 11px
+    right: 11px
+    z-index: 1
+    border-radius: 50%
+
+  .page_nav
+    padding: 0
+    background: none
+  .page_nav .mobile_box
+    display: flex
+    align-items: center
+    padding: 20px
+  .page_nav .open_filter
+    min-width: 40px
+    width: 40px
+    height: 40px
+    background: #6FE1B8
+    border-radius: 9px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 0
+    margin-right: 19px
+  .page_nav .links
+    width: 100%
+    display: block
+    flex-wrap: wrap
+  .page_nav .links p
+    font-weight: 700
+    font-size: 16px
+    line-height: 100%
+    color: #546EDB
+  .page_nav .links span
+    width: 1px
+    margin: 0 4px
+    font-weight: 400
+    font-size: 12px
+    line-height: 80%
+    color: #fff
+  .page_nav .links .item
+    font-weight: 800
+    font-size: 10px
+    line-height: 15px
+    color: #6FE1B8
+    padding: 0
+  .page_nav .links .item.active
+    font-weight: 700
+    color: #6FE1B8
+  .nav_link
+    display: none
+  .page_nav ul
+    overflow-x: auto
+    background: #546EDB
+    padding: 0 0
+  .page_nav .link
+    padding: 10px 16px
+    font-size: 12px
+    line-height: 18px
+    margin-right: 10px
+  .MuiPagination-root
+    margin-top: 35px
+    margin-bottom: 30px
+
+@media (max-width: 768px)
+  .modal__card3 .bordered_bottom
+    margin-left: -30px
+    margin-right: -33px

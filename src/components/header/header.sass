@@ -1,0 +1,383 @@
+.header
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+  &__btns-wrapper
+    display: flex
+    align-items: center
+  &__btns-search
+    position: relative
+    width: 40px
+    height: 40px
+    background: #546EDB
+    border: 0
+    border-radius: 14px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &.fixed
+    z-index: 100
+    position: fixed
+    width: 100%
+
+  &__top
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    padding: 10px 0
+    background: #F7F7FE
+
+    .box
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-pack: justify
+      -ms-flex-pack: justify
+      justify-content: space-between
+      gap: 20px
+
+    .left
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      column-gap: 5px
+
+      .item
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: #000000
+        margin-right: 30px
+
+        &:hover
+          color: #546EDB
+
+    .right
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      align-items: center
+      gap: 10px
+      width: 30%
+      justify-content: flex-end
+
+      .link
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: #000000
+
+        &:hover
+          color: #546EDB
+
+      .city
+        border: 0
+        background-color: transparent
+        position: relative
+        padding: 0
+
+        &::before
+          content: ""
+          position: absolute
+          left: -15px
+          top: 0
+          height: 14px
+          width: 12px
+          background-image: url(../../assets/images/loc.svg)
+          background-repeat: no-repeat
+          background-position: center
+
+        p
+          display: -webkit-box
+          display: -ms-flexbox
+          display: flex
+          -webkit-box-align: center
+          -ms-flex-align: center
+          align-items: center
+          font-weight: 600
+          font-size: 14px
+          line-height: 17px
+          color: #546EDB
+
+          svg
+            margin-right: 7px
+
+        &__select
+          display: block
+          position: absolute
+          top: 45px
+          right: -3px
+          z-index: 1
+          background: #FFFFFF
+          -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+          width: 400px
+          padding: 22px 16px 22px 23px
+          border-radius: 5px
+          z-index: 3
+
+          &>div
+            margin-bottom: 10px
+
+          .select
+            margin-bottom: 10px
+
+          &::after
+            content: ""
+            width: 19px
+            height: 19px
+            background-color: #FFFFFF
+            position: absolute
+            top: -9px
+            right: 24px
+            -webkit-transform: rotate(-45deg)
+            transform: rotate(-45deg)
+
+  &__bottom
+    padding: 20px 0
+    background: #fff
+    .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+      position: relative
+    &-nav
+      display: flex
+      align-items: center
+      gap: 10px
+    .advanced_button
+      padding: 14px 22px
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      color: #FFFFFF
+      background: #546EDB
+      border-radius: 14px
+    form
+      display: flex
+      align-items: center
+      background: #546EDB
+      padding: 1px
+      border-radius: 14px
+      button
+        width: 40px
+        height: 30px
+        background-repeat: no-repeat
+        background-color: transparent
+        border: none
+        background-position: center
+        padding: 0
+        background-image: url(../../assets/images/search-white.svg)
+    &-categories
+      padding: 14px 22px 14px 60px
+      font-weight: 700
+      font-size: 18px
+      line-height: 22px
+      color: #FFFFFF
+      background: #546EDB
+      border-radius: 14px
+      border: none
+      position: relative
+      transition: background .3s ease-in-out
+      &:hover
+        background: #5e7cf3
+
+      &::before
+        content: ""
+        height: 100%
+        width: 50px
+        display: block
+        position: absolute
+        background-color: #6FE1B8
+        background-image: url(../../assets/images/categories-lines.svg)
+        background-repeat: no-repeat
+        background-position: center
+        border-radius: 14px
+        left: 0
+        top: 0
+
+    input
+      width: 462px
+      padding: 17px
+      background: #F6F7FE
+      border: none
+      border-radius: 13px
+
+.css-1okebmr-indicatorSeparator
+  display: none
+
+.caret-down
+  transition: all 0.4s
+
+.caret-up
+  transform: rotate(180deg)
+  transition: all 0.4s
+
+.header__burger
+  display: none
+
+.svg_mobile
+  width: 24px
+  height: 24px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: 12px
+
+.header_mobile
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  .header_mobile_top
+    padding: 10px 15px
+    background-color: #546EDB
+    border-radius: 0 0 8px 8px
+    position: relative
+    z-index: 1
+    .header_mobile_top__top_side
+      display: flex
+      justify-content: space-between
+      margin-bottom: 40px
+      align-items: center
+  .header_mobile_bottom
+    background: #FFFFFF
+    padding: 20px 15px
+    margin-top: -10px
+
+.mobile_navigation
+  li
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    a, p
+      font-family: 'Roboto'
+      font-size: 16px
+      line-height: 19px
+
+.header_mobile_top
+  ul a, p
+    color: #fff
+  &__create-adv
+    background: #6FE1B8
+    border: 2px solid #6FE1B8
+    color: #546EDB
+    padding: 10px
+    display: flex
+    justify-content: center
+    gap: 13px
+    margin-bottom: 15px
+    border-radius: 8px
+.header_mobile_bottom
+  a
+    color: #546EDB
+
+.header_mobile_close
+  cursor: pointer
+
+.header_mobile
+  position: absolute
+  transform: translateX(130%)
+  height: 100vh
+  transition: transform 0.5s ease-in-out
+  display: none
+
+.header_mobile.active
+  position: absolute
+  overflow: auto
+  transform: translateX(0)
+  z-index: 10000
+
+.header_mobile_bottom
+  svg
+    path
+      fill: rgb(84, 110, 219)
+
+.personal__header
+  display: flex
+  align-items: center
+  .personal_header__img
+    display: flex
+    img
+      width: 20px
+      height: 20px
+      margin-right: 5px
+      border-radius: 100%
+  .personal_header__name
+    font-size: 14px
+    line-height: 16px
+    color: #000000
+    font-family: Gilroy, sans-serif
+
+span.item
+  cursor: pointer
+
+@media (max-width: 1200px)
+  .header
+    &__bottom
+      input
+        width: 250px
+
+@media (max-width: 1024px)
+  .header
+    &__top
+      .left
+        row-gap: 12px
+      .right
+        width: 55%
+    &__bottom
+      .advanced_button
+        padding: 9px
+        font-size: 14px
+      &-categories
+        padding: 8px 10px 8px 40px
+        font-size: 14px
+        &::before
+          width: 35px
+      input
+        padding: 10px
+        width: 210px
+      form
+        button
+          width: 35px
+      .adv
+        padding: 10px
+        font-size: 14px
+      &-nav
+        gap: 5px
+    &__categories
+      padding: 20px
+      height: 100vh
+
+  .header_mobile_bottom
+    &_city
+      background: #4F68CF
+      border: 1px solid #6FE1B8
+      border-radius: 8px
+      padding: 10px
+      display: flex
+      justify-content: center
+      gap: 8px
+      margin-bottom: 30px
+      text-align: center
+      font-weight: 700
+      font-size: 18px
+  .mobile_navigation
+    .city__select
+      flex-direction: column-reverse
+      margin-bottom: 20px
+
+@media (max-width: 768px)
+  .header__bottom-nav
+    display: none
+  .header_mobile
+    display: block
+  .header form, .header__bottom input
+    height: 100%
+  .header__bottom input
+    width: 100%

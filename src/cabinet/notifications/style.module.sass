@@ -1,0 +1,99 @@
+@import "../../styles/variables.sass"
+
+.notifications_list
+    width: 100%
+    padding: 25px
+    background: #ffffff
+    border: 1px solid $light-blue
+    border-radius: 14px
+    height: 100%
+    position: relative
+    min-height: 200px
+
+    .title
+        display: flex
+        justify-content: space-between
+        gap: 10px
+    .item
+        display: block
+        padding: 16px 23px
+        background: #FFFFFF
+        border: 1px solid rgba(84, 110, 219, 0.2)
+        border-radius: 10px
+        &.disapprouve
+            border: 1px solid rgba(211, 33, 33, 0.2)
+            color: $red
+            h5
+                color: $red
+        &.approuve
+            border: 1px solid $salad
+            h5, .date
+                color: $salad
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+    h5
+        margin-bottom: 5px
+        font-weight: 800
+        font-size: 14px
+        line-height: 17px
+        color: $blue
+
+    .date
+        font-weight: 400
+        font-size: 11px
+        line-height: 14px
+
+    .name_wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 20px
+        padding: 10px
+        background: #f3f3f3
+        border-radius: 10px
+        font-weight: 700
+        font-size: 16px
+        line-height: 19px
+        span
+            position: relative
+            color: #f9b023
+            &::before
+                content: ""
+                position: absolute
+                width: 20px
+                height: 20px
+                left: -20px
+                background-image: url(../../assets/images/star-icon.svg)
+                background-repeat: no-repeat
+                background-position: left center
+
+    .name
+        display: flex
+        align-items: center
+        gap: 10px
+        img
+            width: 30px
+            height: 30px
+            border-radius: 50%
+
+    .text
+        font-weight: 400
+        font-size: 14px
+        line-height: 22px
+
+@media (max-width: 1200px)
+    .notifications_list
+        padding: 20px
+
+@media (max-width: 1024px)
+    .notifications_list
+        padding: 12px 8px
+        .item
+            padding: 15px
+            &:not(:last-child)
+                margin-bottom: 15px
+    .notifications_container
+        display: block
+        height: unset
