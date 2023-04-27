@@ -16,6 +16,7 @@ import { MailIcon } from "../../components/icons/MailIcon";
 import { ExitIcon } from "../../components/icons/ExitIcon";
 import noAvatar from "../../assets/images/stubs/avatar.svg";
 import { BlogIcon } from "../../components/icons/BlogIcon";
+import { PartnersIcon } from "../../components/icons/PartnersIcon";
 import DeviceContext from "../../store/device-context";
 import AuthContext from "../../store/auth-context";
 import { url } from "../../store/host-store";
@@ -86,6 +87,12 @@ const AdminAside = () => {
                         <CharityIcon />
                     </div>
                     Благотворительность
+                </NavLink>
+                <NavLink to="partners-elements" className="cabinet__item" onClick={device.toggleAside}>
+                    <div className="icon">
+                        <PartnersIcon />
+                    </div>
+                    Партнеры
                 </NavLink>
                 <NavLink to="faq" className="cabinet__item" onClick={device.toggleAside}>
                     <div className="icon">
